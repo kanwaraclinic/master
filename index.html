@@ -9,15 +9,21 @@
     <title>กัญวราคลินิก - คลินิกรักษาสิว อันดับ 1</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Prompt', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            background-color: #f9f9f9;
         }
         header {
-            background-color: #f4f4f4;
+            background-color: #ff6f61;
+            color: white;
             padding: 20px;
             text-align: center;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 10px;
         }
         nav {
             background-color: #333;
@@ -30,6 +36,10 @@
             color: white;
             margin: 0 15px;
             text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ff6f61;
         }
         .hero {
             background-image: url('https://www.kanwaraclinic.com/images/hero.jpg');
@@ -43,6 +53,16 @@
         }
         .content {
             padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .service-box {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         footer {
             background-color: #333;
@@ -50,12 +70,25 @@
             text-align: center;
             padding: 10px;
         }
+        .cta-button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .cta-button:hover {
+            background-color: #e55c50;
+        }
     </style>
 </head>
 <body>
     <header>
+        <img src="https://www.kanwaraclinic.com/images/logo.png" alt="กัญวราคลินิก" class="logo">
         <h1>กัญวราคลินิก</h1>
-        <p>คลินิกรักษาสิว อันดับ 1 ย่านซาฟารีเวิลด์ <button class="citation-flag" data-index="2"></p>
+        <p>คลินิกรักษาสิว อันดับ 1 ย่านซาฟารีเวิลด์ <button class="citation-flag" data-index="9"></p>
     </header>
 
     <nav>
@@ -66,27 +99,39 @@
 
     <div class="hero">
         <h2>เปลี่ยนหน้าสิว เป็นหน้าใส</h2>
+        <button class="cta-button">สอบถามเพิ่มเติม</button>
     </div>
 
     <div class="content">
         <section id="about">
             <h2>เกี่ยวกับเรา</h2>
-            <p>กัญวราคลินิกเปิดให้บริการตั้งแต่ปี พศ. 2558 มุ่งเน้นการดูแลปัญหาผิวหน้าให้อ่อนเยาว์ ไม่ว่าจะเป็นโบท็อกซ์ ฟิลเลอร์ เครื่องมือยกกระชับผิวหน้า และการรักษาสิวทุกชนิด <button class="citation-flag" data-index="1"></p>
+            <p>กัญวราคลินิกเปิดให้บริการตั้งแต่ปี พศ. 2558 มุ่งเน้นการดูแลปัญหาผิวหน้าให้อ่อนเยาว์ ไม่ว่าจะเป็นโบท็อกซ์ ฟิลเลอร์ เครื่องมือยกกระชับผิวหน้า และการรักษาสิวทุกชนิด <button class="citation-flag" data-index="9"></p>
+            <p>ด้วยประสบการณ์กว่า 13 ปีของหมอเหมี่ยว เราพร้อมให้คำแนะนำและเลือกการรักษาที่เหมาะสมสำหรับปัญหาผิวของคุณ <button class="citation-flag" data-index="7"></p>
         </section>
 
         <section id="services">
             <h2>บริการของเรา</h2>
-            <ul>
-                <li>รักษาสิวทุกชนิด เช่น สิววัยรุ่น สิววัยทำงาน</li>
-                <li>ลดรอยสิวและหลุมสิวด้วยเทคนิค Subcision <button class="citation-flag" data-index="3"></li>
-                <li>ยกกระชับผิวหน้าด้วยเทคโนโลยี Ultraformer และ Venus Viva <button class="citation-flag" data-index="4"></li>
-            </ul>
+            <div style="display: flex; flex-wrap: wrap;">
+                <div class="service-box">
+                    <h3>รักษาสิว</h3>
+                    <p>รักษาสิวทุกชนิด เช่น สิววัยรุ่น สิววัยทำงาน ด้วยเทคโนโลยีที่ทันสมัยและผลิตภัณฑ์ที่ได้มาตรฐาน <button class="citation-flag" data-index="9"></p>
+                </div>
+                <div class="service-box">
+                    <h3>ลดรอยสิวและหลุมสิว</h3>
+                    <p>ลดรอยสิวและหลุมสิวด้วยเทคนิค Subcision และการใช้เลเซอร์ที่ปลอดภัย <button class="citation-flag" data-index="9"></p>
+                </div>
+                <div class="service-box">
+                    <h3>ยกกระชับผิวหน้า</h3>
+                    <p>ยกกระชับผิวหน้าด้วยเทคโนโลยี Ultraformer และ Venus Viva เพื่อผิวที่เรียบเนียนและอ่อนเยาว์ <button class="citation-flag" data-index="9"></p>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
             <h2>ติดต่อเรา</h2>
-            <p>คลินิกตั้งอยู่หน้าหมู่บ้านไอดีไซน์ ใกล้สำนักงานเขตคลองสามวาและแยกซาฟารีเวิลด์ <button class="citation-flag" data-index="4"></p>
+            <p>คลินิกตั้งอยู่หน้าหมู่บ้านไอดีไซน์ ใกล้สำนักงานเขตคลองสามวาและแยกซาฟารีเวิลด์ <button class="citation-flag" data-index="9"></p>
             <p>โทร: 02-XXXX-XXXX</p>
+            <p>เปิดบริการทุกวัน เวลา 10:00 - 20:00 น.</p>
         </section>
     </div>
 

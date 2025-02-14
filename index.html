@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>กัญวราคลินิก คลินิกรักษาสิว หลุมสิว รูขุมขน ยกกระชับผิวหน้า Ultraformer Venus viva</title>
-  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
   <!-- CSS รวมทั้งหมดในไฟล์เดียว -->
   <style>
     /* === Embedded Font: Kanit (แทนที่ BASE64_DATA_HERE ด้วยข้อมูลฟอนต์จริง) === */
@@ -47,10 +47,17 @@
       margin: 0 auto;
       position: relative;
     }
+    /* Logo: รูปโลโก้และข้อความ */
     .logo {
+      display: flex;
+      align-items: center;
       font-size: 28px;
       font-weight: bold;
       color: #fff;
+    }
+    .logo img {
+      height: 40px; /* ปรับความสูงของโลโก้ */
+      margin-right: 10px;
     }
     /* Hamburger Button (ซ่อนบน desktop) */
     .hamburger {
@@ -212,7 +219,7 @@
         background-color: #51af99;
         width: 100%;
         position: absolute;
-        top: 60px; /* ปรับตามความสูงของ header */
+        top: 60px;
         left: 0;
       }
       nav ul.active {
@@ -245,7 +252,10 @@
   <!-- Header -->
   <header>
     <div class="container">
-      <div class="logo">กัญวราคลินิก</div>
+      <div class="logo">
+        <img src="logo.png" alt="โลโก้ กัญวราคลินิก">
+        <span>กัญวราคลินิก</span>
+      </div>
       <!-- Hamburger Button สำหรับมือถือ -->
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span class="bar"></span>

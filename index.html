@@ -47,17 +47,23 @@
       margin: 0 auto;
       position: relative;
     }
-    /* Logo: รูปโลโก้และข้อความ */
+    /* Logo: แสดงรูปโลโก้พร้อมข้อความ */
     .logo {
       display: flex;
       align-items: center;
-      font-size: 28px;
-      font-weight: bold;
-      color: #fff;
     }
     .logo img {
-      height: 40px; /* ปรับความสูงของโลโก้ */
+      background-color: #fff; /* พื้นหลังสีขาวเฉพาะสำหรับรูปโลโก้ */
+      padding: 5px;
+      height: 40px; /* ปรับความสูงให้พอดี */
+      border-radius: 4px;
       margin-right: 10px;
+    }
+    .logo span {
+      /* ให้พื้นหลังของข้อความเป็นโปร่งใส (แสดงเป็นแบบเดิม) */
+      color: #235E6E;
+      font-size: 28px;
+      font-weight: bold;
     }
     /* Hamburger Button (ซ่อนบน desktop) */
     .hamburger {

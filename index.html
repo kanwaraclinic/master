@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>กัญวราคลินิก คลินิกรักษาสิว หลุมสิว รูขุมขน ยกกระชับผิวหน้า Ultraformer Venus viva</title>
+  <!-- CSS รวมทั้งหมดในไฟล์เดียว -->
+  <style>
+    /* === Embedded Font: Kanit (แทนที่ BASE64_DATA_HERE ด้วยข้อมูลฟอนต์จริง) === */
+    @font-face {
+      font-family: 'Kanit';
+      src: url(data:font/woff2;charset=utf-8;base64,BASE64_DATA_HERE) format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+    /* รีเซ็ตพื้นฐาน */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Kanit', sans-serif;
+      line-height: 1.6;
+      color: #555;
+      padding-bottom: 70px; /* ป้องกันเนื้อหาซ้อนกับ Mobile Bottom Bar */
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #d8af37;
+    }
+    /* Header */
+    header {
+      background-color: #51af99;
+      padding: 15px 0;
+      position: relative;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+    }
+    /* Hamburger Button (ซ่อนบน desktop) */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 24px;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .hamburger .bar {
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 2px;
+    }
+    /* Navigation Menu */
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav ul li {
+      margin-left: 25px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+    }
+    nav ul li a:hover {
+      color: #d8af37;
+    }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+      height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      color: #235E6E;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 22px;
+    }
+    /* Sections */
+    section {
+      padding: 60px 0;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 36px;
+      color: #235E6E;
+    }
+    .about, .reviews, .products {
+      background-color: #f9f9f9;
+    }
+    /* Grid สำหรับบริการ/ผลิตภัณฑ์ */
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .grid-item {
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      flex: 1 1 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .grid-item:hover {
+      transform: translateY(-5px);
+    }
+    .grid-item h3 {
+      margin-bottom: 15px;
+      color: #235E6E;
+      font-size: 20px;
+    }
+    .grid-item p {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    /* ตัวอย่างปุ่ม */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #51af99;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #51af99;
+      color: #d8af37;
+    }
+    /* Footer */
+    footer {
+      background-color: #4a4a4a;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+    /* Mobile Bottom Bar */
+    .mobile-bottom-bar {
+      display: none;
+    }
+    @media (max-width: 576px) {
+      .mobile-bottom-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #51af99;
+        border-top: 1px solid #eee;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+      }
+      .mobile-bottom-bar a {
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        flex: 1;
+        padding: 5px;
+        transition: color 0.3s ease;
+      }
+      .mobile-bottom-bar a:hover {
+        color: #d8af37;
+      }
+    }
+    /* Responsive: Hamburger Menu สำหรับหน้าจอมือถือ */
+    @media (max-width: 992px) {
+      .hamburger {
+        display: flex;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #51af99;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* ปรับตามความสูงของ header */
+        left: 0;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      nav ul li {
+        margin: 15px 0;
+        text-align: center;
+      }
+    }
+    @media (max-width: 576px) {
+      .hero {
+        height: 300px;
+        padding: 0 10px;
+      }
+      .hero h1 {
+        font-size: 28px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      .grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">กัญวราคลินิก</div>
+      <!-- Hamburger Button สำหรับมือถือ -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#">หน้าหลัก</a></li>
+          <li><a href="#">เกี่ยวกับเรา</a></li>
+          <li><a href="#">ข้อมูลแพทย์</a></li>
+          <li><a href="#">บริการของเรา</a></li>
+          <li><a href="#">บทความ</a></li>
+          <li><a href="#">รีวิว</a></li>
+          <li><a href="#">ติดต่อเรา</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>คลินิกผิวพรรณและความงามครบวงจร</h1>
+      <p>รักษาสิว ลดรอยสิว ยกกระชับผิวหน้า ด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="container">
+      <h2>เกี่ยวกับเรา</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+        กัญวราคลินิกเปิดให้บริการตั้งแต่ปี พ.ศ. 2558 ดูแลปัญหาผิวหน้าด้วยเทคโนโลยีทันสมัยและผลิตภัณฑ์คุณภาพ พร้อมทีมแพทย์ที่มีประสบการณ์มากกว่า 10 ปี เพื่อให้คุณดูดีในแบบของตัวเอง
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <h2>บริการเด่นของเรา</h2>
+      <div class="grid">
+        <div class="grid-item">
+          <h3>คลินิกรักษาสิว</h3>
+          <p>ใช้เทคโนโลยีทันสมัยในการรักษาสิวทุกชนิดอย่างมีประสิทธิภาพ</p>
+        </div>
+        <div class="grid-item">
+          <h3>รักษารอยแดงดำ</h3>
+          <p>ปรับสภาพผิวให้เรียบเนียน ลดรอยแดงดำได้อย่างเห็นผล</p>
+        </div>
+        <div class="grid-item">
+          <h3>เลเซอร์ฝ้า</h3>
+          <p>การรักษาฝ้าด้วยเลเซอร์ที่ปลอดภัยและรวดเร็ว</p>
+        </div>
+        <div class="grid-item">
+          <h3>จี้ไฝ/ขี้แมลงวัน</h3>
+          <p>รักษาด้วยเทคโนโลยีขั้นสูงโดยทีมแพทย์ผู้เชี่ยวชาญ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products">
+    <div class="container">
+      <h2>ผลิตภัณฑ์และเทคโนโลยี</h2>
+      <div class="grid">
+        <div class="grid-item">
+          <h3>Ultraformer</h3>
+          <p>ยกกระชับผิวหน้าและลดริ้วรอยด้วยเทคโนโลยีล้ำสมัย</p>
+        </div>
+        <div class="grid-item">
+          <h3>Botox</h3>
+          <p>ลดเลือนริ้วรอยและฟื้นฟูความอ่อนเยาว์ให้กับใบหน้า</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews">
+    <div class="container">
+      <h2>รีวิวจากลูกค้าจริง</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+        “คลินิกที่เป็นมิตรและมีความเชี่ยวชาญ ผลลัพธ์ที่ได้คุ้มค่ากับการลงทุน ดูแลด้วยความใส่ใจและเป็นกันเอง”
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2024 กัญวราคลินิก | ที่อยู่: 104/9 หมู่บ้านไอดีไซน์, แขวงบางชัน, เขตคลองสามวา, กรุงเทพมหานคร 10510 | โทร: 0917954884</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Bar (เฉพาะมือถือ) -->
+  <div class="mobile-bottom-bar">
+    <a href="https://line.me/ti/p/@kanwaraclinic" target="_blank">ทักข้อความ</a>
+    <a href="https://m.me/kanwaraclinic" target="_blank">ทักอินบ๊อกซ์</a>
+    <a href="https://g.page/kanwaraclinic" target="_blank">แผนที่</a>
+    <a href="tel:0917954884">โทร.</a>
+  </div>
+
+  <!-- JavaScript สำหรับ Hamburger Menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      
+      hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+      
+      console.log('ยินดีต้อนรับสู่ กัญวราคลินิก');
+    });
+  </script>
+</body>
+</html>

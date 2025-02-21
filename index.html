@@ -6,17 +6,105 @@
   <title>กัญวราคลินิก คลินิกรักษาสิว หลุมสิว รูขุมขน ยกกระชับผิวหน้า Ultraformer Venus viva</title>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png">
+  <!-- CSS รวมทั้งหมดในไฟล์เดียว -->
   <style>
+    /* === Embedded Font: Kanit (แทนที่ BASE64_DATA_HERE ด้วยข้อมูลฟอนต์จริง) === */
+    @font-face {
+      font-family: 'Kanit';
+      src: url(data:font/woff2;charset=utf-8;base64,BASE64_DATA_HERE) format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+    /* รีเซ็ตพื้นฐาน */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Kanit', sans-serif;
       line-height: 1.6;
       color: #555;
-      padding-bottom: 70px;
+      padding-bottom: 70px; /* ป้องกันเนื้อหาซ้อนกับ Mobile Bottom Bar */
     }
-    /* Hero Section with Faded Background Image */
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #d8af37;
+    }
+    /* Header */
+    header {
+      background-color: #51af99;
+      padding: 15px 0;
+      position: relative;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+    /* Logo: แสดงรูปโลโก้พร้อมข้อความ */
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      background-color: #fff; /* พื้นหลังสีขาวเฉพาะสำหรับรูปโลโก้ */
+      padding: 5px;
+      height: 40px; /* ปรับความสูงให้พอดี */
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+    .logo span {
+      /* ให้พื้นหลังของข้อความเป็นโปร่งใส (แสดงเป็นแบบเดิม) */
+      color: #235E6E;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    /* Hamburger Button (ซ่อนบน desktop) */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 24px;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .hamburger .bar {
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 2px;
+    }
+    /* Navigation Menu */
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav ul li {
+      margin-left: 25px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+    }
+    nav ul li a:hover {
+      color: #d8af37;
+    }
+    /* Hero Section */
     .hero {
-      background: url('https://www.xn--12cai9azdycpn2gnyb.com/2341.jpg') no-repeat center center;
-      background-size: cover;
+      background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
       height: 450px;
       display: flex;
       align-items: center;
@@ -24,20 +112,13 @@
       text-align: center;
       padding: 0 20px;
       color: #235E6E;
-      position: relative;
     }
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(240, 240, 240, 0.7); /* Faded effect */
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
     }
-    .hero h1, .hero p {
-      position: relative;
-      z-index: 2;
+    .hero p {
+      font-size: 22px;
     }
     /* Sections */
     section {
@@ -48,6 +129,128 @@
       margin-bottom: 40px;
       font-size: 36px;
       color: #235E6E;
+    }
+    .about, .reviews, .products {
+      background-color: #f9f9f9;
+    }
+    /* Grid สำหรับบริการ/ผลิตภัณฑ์ */
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .grid-item {
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      flex: 1 1 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .grid-item:hover {
+      transform: translateY(-5px);
+    }
+    .grid-item h3 {
+      margin-bottom: 15px;
+      color: #235E6E;
+      font-size: 20px;
+    }
+    .grid-item p {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    /* ตัวอย่างปุ่ม */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #51af99;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #51af99;
+      color: #d8af37;
+    }
+    /* Footer */
+    footer {
+      background-color: #4a4a4a;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+    /* Mobile Bottom Bar */
+    .mobile-bottom-bar {
+      display: none;
+    }
+    @media (max-width: 576px) {
+      .mobile-bottom-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #51af99;
+        border-top: 1px solid #eee;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+      }
+      .mobile-bottom-bar a {
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        flex: 1;
+        padding: 5px;
+        transition: color 0.3s ease;
+      }
+      .mobile-bottom-bar a:hover {
+        color: #d8af37;
+      }
+    }
+    /* Responsive: Hamburger Menu สำหรับหน้าจอมือถือ */
+    @media (max-width: 992px) {
+      .hamburger {
+        display: flex;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #51af99;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      nav ul li {
+        margin: 15px 0;
+        text-align: center;
+      }
+    }
+    @media (max-width: 576px) {
+      .hero {
+        height: 300px;
+        padding: 0 10px;
+      }
+      .hero h1 {
+        font-size: 28px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      .grid {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
@@ -76,7 +279,7 @@
           <li><a href="#">ติดต่อเรา</a></li>
         </ul>
       </nav>
-    </div> 
+    </div>
   </header>
 
   <!-- Hero Section -->
@@ -153,7 +356,6 @@
   <footer>
     <div class="container">
       <p>© 2024 กัญวราคลินิก | ที่อยู่: 104/9 หมู่บ้านไอดีไซน์, แขวงบางชัน, เขตคลองสามวา, กรุงเทพมหานคร 10510 | โทร: 0917954884</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.6549843028633!2d100.7026542!3d13.859736799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6353ea6f7fc5%3A0xd93abae2497f5f1f!2z4LiB4Lix4LiN4Lin4Lij4Liy4LiE4Lil4Li04LiZ4Li04LiBIOC4hOC4peC4tOC4meC4tOC4geC4o-C4seC4geC4qeC4suC4quC4tOC4pyDguKvguKXguLjguKHguKrguLTguKcg4Lij4Li54LiC4Li44Lih4LiC4LiZIOC4ouC4geC4geC4o-C4sOC4iuC4seC4muC4nOC4tOC4p-C4q-C4meC5ieC4siBVbHRyYWZvcm1lciBWZW51cyB2aXZh!5e0!3m2!1sth!2sth!4v1739629203947!5m2!1sth!2sth" width="99%" height="289" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </footer>
 
@@ -180,4 +382,3 @@
   </script>
 </body>
 </html>
-

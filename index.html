@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>กัญวราคลินิก คลินิกรักษาสิว หลุมสิว รูขุมขน ยกกระชับผิวหน้า Ultraformer Venus viva</title>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png">
@@ -549,13 +549,198 @@
     </div>
   </section>
 
+
+
   <!-- Reviews Section -->
+
+    <style>
+      .review-slider {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+        touch-action: pan-y pinch-zoom;
+      }
+
+      .review-track {
+        display: flex;
+        transition: transform 0.3s ease-out;
+      }
+
+      .review-slide {
+        flex: 0 0 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        user-select: none;
+      }
+
+      .slider-nav button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.3);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 18px;
+        transition: background-color 0.3s;
+      }
+
+      .slider-nav button:hover {
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .prev-btn {
+        left: 10px;
+      }
+
+      .next-btn {
+        right: 10px;
+      }
+
+      .slider-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 8px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ccc;
+        cursor: pointer;
+      }
+
+      .dot.active {
+        background: #51af99;
+      }
+
+      @media (max-width: 768px) {
+        .slider-nav button {
+          padding: 8px 12px;
+          font-size: 16px;
+        }
+      }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const track = document.querySelector('.review-track');
+        const slides = document.querySelectorAll('.review-slide');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const dotsContainer = document.querySelector('.slider-dots');
+
+        let currentIndex = 0;
+        let startX;
+        let currentX;
+        let walked;
+
+        // Create dots
+        slides.forEach((_, index) => {
+          const dot = document.createElement('div');
+          dot.classList.add('dot');
+          if (index === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => goToSlide(index));
+          dotsContainer.appendChild(dot);
+        });
+
+        function updateDots() {
+          document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+          });
+        }
+
+        function goToSlide(index) {
+          currentIndex = index;
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+          updateDots();
+        }
+
+        function handleStart(event) {
+          startX = event.type.includes('mouse') ? event.pageX : event.touches[0].pageX;
+          walked = 0;
+          
+          track.style.transition = 'none';
+          
+          document.addEventListener('mousemove', handleMove);
+          document.addEventListener('mouseup', handleEnd);
+          document.addEventListener('touchmove', handleMove);
+          document.addEventListener('touchend', handleEnd);
+        }
+
+        function handleMove(event) {
+          currentX = event.type.includes('mouse') ? event.pageX : event.touches[0].pageX;
+          walked = currentX - startX;
+
+          const maxWalk = track.offsetWidth / 3;
+          if (Math.abs(walked) < maxWalk) {
+            const translate = (-currentIndex * 100) + (walked / track.offsetWidth * 100);
+            track.style.transform = `translateX(${translate}%)`;
+          }
+        }
+
+        function handleEnd() {
+          track.style.transition = 'transform 0.3s ease-out';
+          
+          if (Math.abs(walked) > track.offsetWidth / 3) {
+            if (walked > 0 && currentIndex > 0) {
+              currentIndex--;
+            } else if (walked < 0 && currentIndex < slides.length - 1) {
+              currentIndex++;
+            }
+          }
+          
+          goToSlide(currentIndex);
+
+          document.removeEventListener('mousemove', handleMove);
+          document.removeEventListener('mouseup', handleEnd);
+          document.removeEventListener('touchmove', handleMove);
+          document.removeEventListener('touchend', handleEnd);
+        }
+
+        // Event Listeners
+        track.addEventListener('mousedown', handleStart);
+        track.addEventListener('touchstart', handleStart);
+
+        prevBtn.addEventListener('click', () => {
+          if (currentIndex > 0) {
+            goToSlide(currentIndex - 1);
+          }
+        });
+
+        nextBtn.addEventListener('click', () => {
+          if (currentIndex < slides.length - 1) {
+            goToSlide(currentIndex + 1);
+          }
+        });
+      });
+    </script>
+
   <section class="reviews">
     <div class="container">
       <h2>รีวิวจากลูกค้าจริง</h2>
-      <p style="text-align: center; max-width: 800px; margin: 0 auto;">
-        "คลินิกที่เป็นมิตรและมีความเชี่ยวชาญ ผลลัพธ์ที่ได้คุ้มค่ากับการลงทุน ดูแลด้วยความใส่ใจและเป็นกันเอง"
-      </p>
+      <div class="review-slider">
+        <div class="review-track">
+          <p class="review-slide" style="text-align: center;">
+            "คลินิกที่เป็นมิตรและมีความเชี่ยวชาญ ผลลัพธ์ที่ได้คุ้มค่ากับการลงทุน ดูแลด้วยความใส่ใจและเป็นกันเอง"
+          </p>
+          <p class="review-slide" style="text-align: center;">
+            "แพทย์ใส่ใจคนไข้มาก อธิบายละเอียด ให้คำแนะนำดี"
+          </p>
+          <p class="review-slide" style="text-align: center;">
+            "ราคาไม่แพง คุ้มค่ากับการรักษา ผลลัพธ์ดีมาก"
+          </p>
+        </div>
+        <div class="slider-nav">
+          <button class="prev-btn" aria-label="Previous review">❮</button>
+          <button class="next-btn" aria-label="Next review">❯</button>
+        </div>
+        <div class="slider-dots"></div>
+      </div>
     </div>
   </section>
 

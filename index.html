@@ -481,6 +481,87 @@
     </div>
   </section>
 
+  <!-- popular-services Section -->
+<section class="popular-services">
+  <div class="container">
+    <h2>บริการยอดนิยม</h2>
+    <div class="video-grid">
+      <div class="video-item">
+        <iframe 
+          src="https://lh3.googleusercontent.com/ggs/AF1QipPusa_grGnGZ9FRp6GroQp21vYP52sDTwDMeyix=m18" 
+          frameborder="0" 
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="video-item">
+        <iframe 
+          src="https://lh3.googleusercontent.com/ggs/AF1QipM4tqKWb4PnDrFjbIQNEF5a-H1n5Iqd13g4ARiK=m18" 
+          frameborder="0" 
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .popular-services {
+      padding: 60px 0;
+      background-color: #f9f9f9;
+    }
+    
+    .popular-services h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 36px;
+      color: #235E6E;
+    }
+    
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .video-item {
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%; /* 1:1 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .video-item iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+    
+    @media (max-width: 768px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+      }
+      
+      .video-item {
+        margin-bottom: 20px;
+      }
+      
+      .popular-services h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</section>
   <!-- Services Section -->
   <section class="services">
     <div class="container">

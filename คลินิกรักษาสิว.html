@@ -1,0 +1,825 @@
+<!DOCTYPE html> 
+<html lang="th"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>10 อันดับ คลินิกรักษาสิวที่ดีที่สุด ปี 2025 | Top Thai Clinic</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  
+  <!-- CSS รวมทั้งหมดในไฟล์เดียว -->
+  <style>
+    /* === Embedded Font: Kanit === */
+    @font-face {
+      font-family: 'Kanit'; 
+      src: url(data:font/woff2;charset=utf-8;base64,BASE64_DATA_HERE) format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+    /* รีเซ็ตพื้นฐาน */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Kanit', sans-serif;
+      line-height: 1.6;
+      color: #555;
+      padding-top: 70px;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #d8af37;
+    }
+    header {
+      background-color: #51af99;
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      background-color: #fff;
+      padding: 5px;
+      height: 40px;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+    .logo span {
+      color: #235E6E;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 24px;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .hamburger .bar {
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav ul li {
+      margin-left: 25px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+    }
+    nav ul li a:hover {
+      color: #d8af37;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('images/rank11.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 40px 20px;
+      color: #235E6E;
+      margin-top: 20px;
+    }
+    .hero .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    .hero-main-text {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      margin-top: 30px;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .highlight-item {
+      font-size: 20px;
+      font-weight: bold;
+      color: #235E6E;
+    }
+
+    /* About Section */
+    .about-content {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+    .about-image {
+      flex: 1;
+    }
+    .clinic-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .about-text {
+      flex: 1;
+      padding: 20px;
+    }
+    .about-text h2 {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    /* Services Section */
+    section {
+      padding: 60px 0;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 36px;
+      color: #235E6E;
+    }
+    .about, .reviews, .products {
+      background-color: #f9f9f9;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .grid-item {
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      flex: 1 1 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      max-width: 600px;
+    }
+    .grid-item:hover {
+      transform: translateY(-5px);
+    }
+    .grid-item h3 {
+      margin-bottom: 15px;
+      color: #235E6E;
+      font-size: 20px;
+    }
+    .grid-item p {
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+
+    /* Image Grid */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 10px;
+      justify-content: center;
+    }
+    .image-grid img {
+      width: 250px;
+      height: 150px;
+      object-fit: contain;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      background-color: #f8f8f8;
+      padding: 5px;
+    }
+    .image-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4a4a4a;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* Floating Contact Buttons */
+    .floating-buttons {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .floating-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .floating-button:hover {
+      transform: scale(1.1);
+    }
+    .floating-button i {
+      font-size: 24px;
+      color: white;
+    }
+    .call-button {
+      background-color: #4CAF50;
+    }
+    .line-button {
+      background-color: #00B900;
+    }
+    .messenger-button {
+      background-color: #0084FF;
+    }
+
+    /* Additional styles for the clinic ranking content */
+    .clinic-ranking {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    .clinic-item {
+      padding: 20px;
+      margin-bottom: 30px;
+      border-top: 1px solid #eee;
+    }
+    .clinic-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .rank-number {
+      font-size: 32px;
+      font-weight: bold;
+      margin-right: 15px;
+      color: #51af99;
+    }
+    .clinic-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #235E6E;
+    }
+    .clinic-image {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 0 auto 20px;
+      display: block;
+      border-radius: 8px;
+    }
+    .clinic-content p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    .clinic-content ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+    .clinic-content ul li {
+      margin-bottom: 8px;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .contact-col {
+      flex: 1;
+      min-width: 250px;
+    }
+    .contact-info h5 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #235E6E;
+    }
+    .contact-info p {
+      margin-bottom: 8px;
+    }
+    .contact-info i {
+      margin-right: 8px;
+      color: #51af99;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .pi-text-bg-base {
+      background-color: #fffacd;
+      padding: 3px 5px;
+      font-weight: bold;
+    }
+    .textjust {
+      text-align: justify;
+    }
+    iframe {
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .listcircle {
+      list-style-type: circle;
+      padding-left: 20px;
+    }
+    .textnum_BIG {
+      font-size: 42px;
+      font-weight: bold;
+      color: #51af99;
+      margin-right: 15px;
+    }
+    .textrank {
+      font-size: 28px;
+      font-weight: bold;
+      color: #235E6E;
+    }
+
+    /* Media Queries */
+    @media (max-width: 992px) {
+      .hamburger {
+        display: flex;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #51af99;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      nav ul li {
+        margin: 15px 0;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        margin-top: 5px;
+        padding: 30px 15px;
+      }
+      .hero h1 {
+        font-size: 28px;
+      }
+      .hero-main-text {
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 0 10px;
+      }
+      .hero-highlights {
+        margin-top: 25px;
+        padding: 15px;
+        gap: 10px;
+      }
+      .highlight-item {
+        font-size: 16px;
+      }
+      .floating-buttons {
+        display: flex;
+      }
+      .about-content {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .about-image {
+        order: -1;
+        margin-bottom: 20px;
+      }
+      .about-text {
+        padding: 0;
+      }
+      .about-text h2 {
+        text-align: center;
+      }
+      .image-grid img {
+        width: 200px;
+        height: 120px;
+      }
+      .contact-info {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero {
+        padding: 0 10px;
+      }
+      .grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      .image-grid img {
+        width: 150px;
+        height: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="โลโก้ Top Thai Clinic">
+        <span>Top Thai Clinic</span>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="index.html">หน้าหลัก</a></li>
+          <li><a href="#">ผิวขาว</a></li>
+          <li><a href="#">ฟิลเลอร์</a></li>
+          <li><a href="#">ลดริ้วรอย</a></li>
+          <li><a href="#">ลดสัดส่วน</a></li>
+          <li><a href="#">ศัลยกรรม</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Floating Contact Buttons -->
+  <div class="floating-buttons">
+    <a href="tel:022515588" class="floating-button call-button" aria-label="Call us">
+      <i class="material-icons">phone</i>
+    </a>
+    <a href="https://line.me/ti/p/%40topthaiclinic" class="floating-button line-button" aria-label="Line chat">
+      <i class="material-icons">chat</i>
+    </a>
+    <a href="https://www.facebook.com/Topthaiclinic" class="floating-button messenger-button" aria-label="Facebook messenger">
+      <i class="material-icons">message</i>
+    </a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>10 อันดับ คลินิกรักษาสิวที่ดีที่สุด ปี 2025</h1>
+      <div class="hero-highlights">
+        <div class="highlight-item">
+          <ul>
+            <li class="pi-text-bg-base2"><a class="pi-text-bg-base2" href="#Rank1"><span class="textnum">1</span> <u>M Vita Clinic</u></a></li>
+            <li class="pi-text-bg-base3"><a class="pi-text-bg-base3" href="#Rank2"><span class="textnum">2</span> <u>ตรีสุรางค์ คลินิก</u></a></li>
+            <li class="pi-text-bg-base2"><a class="pi-text-bg-base2" href="#Rank3"><span class="textnum">3</span> <u>ลลิษาคลินิก</u></a></li>
+            <li class="pi-text-bg-base3"><a class="pi-text-bg-base3" href="#Rank4"><span class="textnum">4</span> <u>ราชเทวีคลินิก</u></a></li>
+            <li class="pi-text-bg-base2"><a class="pi-text-bg-base2" href="#Rank5"><span class="textnum">5</span> <u>โรงพยาบาลแพทย์รังสิต</u></a></li>
+          </ul>
+        </div>
+        <div class="highlight-item">
+          <ul>
+            <li class="pi-text-bg-base3"><a class="pi-text-bg-base3" href="#Rank6"><span class="textnum">6</span> <u>พรเกษมคลินิก</u></a></li>
+            <li class="pi-text-bg-base2"><a class="pi-text-bg-base2" href="#Rank7"><span class="textnum">7</span> <u>Pongsak Clinic</u></a></li>
+            <li class="pi-text-bg-base3"><a class="pi-text-bg-base3" href="#Rank8"><span class="textnum">8</span> <u>นิติพล คลินิก</u></a></li>
+            <li class="pi-text-bg-base2"><a class="pi-text-bg-base2" href="#Rank9"><span class="textnum">9</span> <u>The Prima Clinic</u></a></li>
+            <li class="pi-text-bg-base3"><a class="pi-text-bg-base3" href="#Rank10"><span class="textnum">10</span> <u>55th Clinic</u></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-image">
+          <img class="clinic-image" src="images/10-อันดับคลินิกรักษาสิว/รักษาสิว1.jpg" alt="รักษาสิว">
+        </div>
+        <div class="about-text">
+
+  <h2>การรักษาสิว</h2>
+<p>สิวเป็นความผิดปกติของผิวหนัง ที่สามารถพบได้บ่อย โดยเฉพาะในวัยหนุ่มสาว บางรายมีอาการเพียงเล็กน้อย และอาจไม่จำเป็นต้องรักษา แต่ส่วนมากมักจะเป็นมากพอควรและเป็นอยู่นาน ซึ่งนำไปสู่การเกิดรอยแผลเป็น ทำให้เสียโฉมไปตลอดชีวิต เรื่องจากสิงมักจะเป็นมากในวัยรุ่น ดังนั้นจึงอาจส่งผลถึงการพัฒนาบุคลิกภาพ ทำให้วัยรุ่นบุคลิกภาพเสีย อาจกลายเป็นคนขาดความมั่นใจในตนเอง ไม่กล้าเข้าสังคม และไม่กล้าแสดงออกซึ่งความสามารถของตนได้</p>
+
+<h2>สิวเกิดขึ้นได้อย่างไร?</h2>
+<p>ในการเกิดสิวนั้น สิ่งสำคัญก็คือการเกิดหัวสิว ที่เราเรียกว่า "โคมีโดน" ในท่อของต่อมน้ำมันการเกิดหัวสิวนี้ เนื่องมาจาก</p>
+<ul>
+  <li>มีการจับตัวของชั้นหนังกำพร้า ชั้นขี้ไคลบริเวณท่อน้ำมัน เกิดเป็นหัวสิว</li>
+  <li>เกิดการเจริญของเชื้อแบคทีเรียในท่อไขมันนำไปสู่การอักเสบเป็นตุ่มแดงหรือตุ่มหนอง</li>
+  <li>มีการสร้างไขมันจากต่อมน้ำมันมากกว่าธรรมดา</li>
+</ul>
+
+<h2>สิวจะหายไปเองไหม?</h2>
+<p>สิวตามธรรมชาติ ซึ่งพบในวัยรุ่นนั้น ถ้าเป็นไม่มากนักมักจะหายไปเองได้ เมื่ออายุมากว่า 25 ปี แต่อาจเหลือรอยแผลเป็นอยู่ แต่ถ้าเป็นมากๆ แล้วมีโอกาสเป็นได้จนแม้จะอายุ 40 – 50 ปี โดยไม่เคยหายเลย</p>
+
+<h2>สิวแบ่งออกเป็น 2 ประเภทใหญ่ๆ คือ</h2>
+<ul>
+  <li>สิวที่เป็นเองในวัยรุ่น</li>
+  <li>สิวที่เกิดจากการใช้เครื่องสำอาง หรือ ยาต่างๆ</li>
+</ul>
+
+
+
+  <h2>คลินิกรักษาสิวที่ไหนดี</h2>
+<p>คลินิกรักษาสิวที่ดี ควรต้องมีใบอนุญาตดำเนินการ สามารถเปิดกิจการได้อย่างถูกต้อง สถานที่ต้องสะอาดปลอดภัย ตัวยาผ่าน อ.ย. รับรองอย่างถูกต้อง เครื่องมือทางการแพทย์ต้องทันสมัย ซึ่งเห็นง่ายๆเลยจากการพูดถึง บอกต่อหรือการรีวิวจากคนจำนวนมาก โดยเราสามารถดูได้จากภาพก่อนรักษา-หลังรักษา ส่วนใหญ่คลินิกรักษาสิวที่ไหนดี ชื่อนี้จะมีการพูดถึงบ่อยในโลกออนไลน์</p>
+
+<h4>Top Thai Clinic ได้รวบรวมคลินิกความงามที่รักษาสิวที่ดีที่สุด ปี 2025 มาให้เลือกกัน</h4>
+
+<!-- Clinic 1 -->
+<div id="Rank1">
+  <h3><span class="rank">1</span> M Vita Clinic</h3>
+  <img src="images/10-อันดับคลินิกรักษาสิว/1-MVita.jpg" alt="M Vita Clinic">
+  <p>อันดับ 1 ที่มาแรงในขณะนี้ ดูแลสิวและรอย เห็นผลอย่างรวดเร็ว ไม่เลี้ยงไข้ ติดอันดับต้นๆในหลายๆ เว็บไซต์ และมีรีวิวเคสที่รักษาหาย การันตีผลลัพธ์ เข้าสู่เคสที่ 8,000+ ต้องที่นี่ เอ็มวีต้าคลินิก อโศก เดินทางง่าย ใกล้ BTS และ MRT</p>
+  <p>M Vita Clinic เอ็มวีต้าคลินิก เปิดให้บริการตั้งแต่ปี 2553 และมีความเชี่ยวชาญในด้านการรักษาสิว และรอยสิวเป็นพิเศษ โดยแพทย์ประจำคลินิก คือ คุณหมอเอ็ม นพ. มนตรี อุดมประเสริฐกุล ซึ่งเป็นแพทย์ที่มีประสบการณ์ในการดูแลปัญหาผิวพรรณมายาวนานกว่า 12 ปี ได้ออกแบบการรักษาสิวที่เป็นขั้นตอนที่เป็นเอกลักษณ์เฉพาะ ที่แตกต่างจากที่อื่น คุ้มค่า คุ้มราคา และ ดีขึ้นอย่างแน่นอนเมื่อรักษาต่อเนื่อง</p>
+  <p><strong>ด้วยโปรแกรม <i>"แอคนิเคลียร์" (Acniclear)</i> ราคาเพียงครั้งละ 1,000 บาท, เฉลี่ยครั้งละ 720 บาท เมื่อซื้อคอร์ส 10 ครั้ง 7,200 บาท ซึ่งมีขั้นตอนต่างๆ ดังนี้</strong></p>
+  <ul>
+    <li>ทำความสะอาดผิว 2 ขั้นตอน อย่างล้ำลึก เพื่อให้พร้อมก่อนเข้าสู่ขั้นตอนการรักษาสิว ให้มีประสิทธิภาพสูงที่สุด</li>
+    <li>Tangerine Peel ผลัดเซลผิวแบบอ่อนโยนด้วยกรดผลไม้สูตรสำหรับผิวแพ้ง่าย ลดการอุดตัน ลดรอยสิว และช่วยให้กดสิวง่ายขึ้น</li>
+    <li>Facial Ozone Therapy พ่นโอโซนอุ่น ช่วยเปิดหัวสิว ให้สิวอ่อนตัว ทำให้กดสิวได้ง่ายขึ้น</li>
+    <li>Comedone Extraction กดสิวแบบละเอียดและชำนาญด้วยเทอราพิสที่มีความเชี่ยวชาญในการวิเคราะห์สิวแต่ชนิด และจัดการสิวทั้งอุดตันและอักเสบได้อย่างถูกหลัก และให้เวลาในการกดสิวอย่างเต็มที่ ไม่จำกัด อย่างเหมาะสม ทำให้ผลการรักษาสิวดีมาก และเห็นผลได้ไว</li>
+    <li>Acne Spark คลื่นประจุความถี่สูง ฆ่าเชื้อสิว และทำให้สิวแห้ง หายบวมเร็วขึ้น</li>
+    <li>Blue and Red light LED phototherapy ฉายแสงรักษาผิว ด้วยแสงสองช่วงคลื่นแสงสีน้ำเงิน ความยาวคลื่น 415 nm ฆ่าเชื้อสิวที่รูขุมขนชั้นตื้นได้ดีมากแสงสีแดง ความยาวคลื่น 633 nm ซึ่งช่วยฆ่าเชื้อสิวในรูขุมขนชั้นลึก และช่วยลดการอักเสบ ให้สิวดีขึ้นอย่างรวดเร็ว และฟื้นฟูผิวให้แข็งแรงขี้นอีกด้วย</li>
+    <li>ฉีดสิวอักเสบ โดยคุณหมอ ให้สิวยุบบวมไว</li>
+    <li>รับยาทาครั้งละ 4 ชิ้น และยารับประทาน 1 ชุดอีกด้วย เพื่อให้คนไข้ได้ทายารักษาต่อที่บ้าน ผลการรักษาจึงดี โดยไม่ต้องมีค่าใช้จ่ายเพิ่ม</li>
+  </ul>
+  <p><u>สำหรับท่านที่เป็นสิวเยอะ และมีรอยด้วย</u> ทางเอ็มวีต้าคลินิกยังมีอีกหนึ่งโปรแกรมที่เป็นที่นิยมมาก สิวและรอยหายเร็วมากที่สุด (best seller) หลังทำเพียงครั้งแรก คนไข้จะรู้สึกได้ว่าดีขึ้นอย่างชัดเจน นั่นคือโปรแกรม <strong><i>เมดิแอคเคลียร์ MEDIACLEAR</i></strong> <strong>ราคาครั้งละ 3,500 บาท</strong> ซึ่งมีขั้นตอนที่ครบถ้วนเหมือน แอคนิเคลียร์ ทุกอย่าง และเพิ่มการดูแลด้วยเลเซอร์ที่ทันสมัยผ่านมาตรฐานระดับโลก จากประเทศเยอรมัน คือ Quatra Pro Yellow ไม่ทำให้ผิวบาง แถมช่วยให้แข็งแรงยิ่งขึ้น จะทำให้ผิวดูเกลี้ยงใส ลดรอย ฆ่าเชื้อสิว และปัญหาผิวอักเสบ จึงทำให้ผลลัพธ์ดีขึ้นเร็ว x2 เหมาะกับท่านที่ต้องการให้ผิวที่เป็นสิวกลับมาใสอย่างรวดเร็ว</p>
+  <p><strong>ที่อยู่ :</strong> เอ็มวีต้าคลินิก คลินิกรักษาสิว เลเซอร์รอยสิว 235-235/1 ถนนสุขุมวิท แขวง คลองเตยเหนือ, เขตวัฒนา กรุงเทพมหานคร 10110</p>
+  <h5><u>ช่องทางการติดต่อ</u></h5>
+  <p><i class="fab fa-line"></i> : <a href="https://line.me/R/ti/p/@mvitaclinic" target="_blank"> @mvitaclinic</a></p>
+  <p><i class="fa fa-facebook-square"></i> : <a href="https://www.facebook.com/mvitaclinic.thailand" target="_blank"> facebook.com/M Vita Clinic</a></p>
+  <p><i class="fa fa-globe"></i> : <a href="https://www.mvitaclinic.com" target="_blank"> www.mvitaclinic.com</a></p>
+  <p><i class="fa fa-instagram"></i> : <a href="https://www.instagram.com/mvitaclinicofficial/" target="_blank"> mvitaclinicofficial</a></p>
+  <p><i class="fa fa-phone-square"></i> : <a href="tel:026408097" target="_blank"> 02-640-8097</a></p>
+  <p><i class="fa fa-map-marker"></i> แผนที่ เอ็มวีต้าคลินิก: <a href="https://www.google.com/maps/place/%E0%B9%80%E0%B8%AD%E0%B9%87%E0%B8%A1%E0%B8%A7%E0%B8%B5%E0%B8%95%E0%B9%89%E0%B8%B2%E0%B8%84%E0%B8%A5%E0%B8%B4%E0%B8%99%E0%B8%B4%E0%B8%81/@13.7465849,100.5605663,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29eefdb1574c9:0xc4c89c49c31f457e!8m2!3d13.7465849!4d100.562755?entry=yt" target="_blank"> Click Here</a></p>
+</div>
+
+<!-- Clinic 2 -->
+<div id="Rank2">
+  <h3><span class="rank">2</span> ตรีสุรางค์ คลินิก</h3>
+  <img src="images/10-อันดับคลินิกรักษาสิว/2-treesurang.png" alt="ตรีสุรางค์ คลินิก">
+  <p>ตรีสุรางค์ คลินิก เป็นคลินิกที่ดูแลรักษาสิวทุกประเภท หลุมสิว รอยดำ ฝ้า กระ รูขุมขนกว้าง กำจัดขน และปัญหาความงามด้านผิวพรรณ และมีประสบการณ์ที่ใช้หลักวิชาการทางการแพทย์ พร้อมทั้งเทคโนโลยีทันสมัย ได้รับการรับรองมาตรฐานจาก US FDA สหรัฐอเมริกา CE, TUV ยุโรป KFDA เกาหลี และทางคลินิกได้นำนวัตกรรมของการปรับสีผิว จากเกาหลีมาใช้ในการรักษา ซึ่งให้ผลลัพธ์เป็นที่น่าพอใจในราคาประหยัด และนี่คือเหตุผลที่ใครๆ ต่างมารักษาสิวที่นี่</p>
+  <ul>
+    <li>ใช้วิธีรักษาสิวแบบกระชับ หายเร็ว ด้วยนโยบาย "ไม่เลี้ยงไข้"</li>
+    <li>จริงใจ และใส่ใจทุกรายละเอียดการรักษา</li>
+    <li>เลือกใช้ยาและผลิตภัณฑ์คุณภาพดีที่ไม่ทำให้ติดยาหรือดื้อยาในระยะยาว</li>
+    <li>รักษาด้วยเครื่องมือที่มีประสิทธิภาพสูงจากต่างประเทศ</li>
+    <li>ราคาประหยัด คุ้มค่า และไม่มีค่าใช้จ่ายอื่นๆ แอบแฝง</li>
+  </ul>
+  <p><u>ทางตรีสุรางค์ คลินิก มีโปรแกรมรักษาสิวที่น่าสนใจได้แก่</u></p>
+  <p><strong>"ALA PROGRAM"</strong> คือ โปรแกรมรักษาสิว ระดับ Premium มาร์คสิวเฉพาะที่สั่งตรงจากต่างประเทศ โดยส่วนผสมที่มีสารสกัดจากธรรมชาติ มากกว่า 30 ชนิด ช่วยลดอาการผิวมัน, ลดสิว, ลดผด, ลดผิวแห้ง, detox ผิว นอกจากนี้คุณหมอยังมีสูตรพิเศษ ที่ช่วยให้ผดผื่นหาย ในข้ามคืน</p>
+  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i> สนใจโปรโมชั่น! <span>ALA PROGRAM 3,500 บาท</span> <a href="https://line.me/R/ti/p/%40treesurang" target="_blank"><u> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> สนใจคลิ๊ก</u></a></p>
+  
+  <p><strong>โปรโมชั่น! ฉีดลดสิวปรับสมดุลให้สภาพผิวแข็งแรง แบบเร่งด่วนสามารถฉีดลด อาการผดผื่น ลดสิวร่วมที่ช่วยให้ผดผื่นหาย ในข้ามคืน</strong></p>
+  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i> สนใจโปรโมชั่น! <span>ครั้งละ 3,999 บาท</span> (โปรทดลอง จากปกติ 5,999 บาท) <a href="https://line.me/R/ti/p/%40treesurang" target="_blank"><u> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> สนใจคลิ๊ก</u></a></p>
+  
+  <p><strong>"Acne Clear PROGRAM"</strong> คือการดูแล รักษาสิว ลบรอยสิว ขั้นพื้นฐานอย่างถูกวิธี ประกอบด้วยการกดสิว,แต้มสิว, ฉายแสงฆ่าเชื้อสิว,มาร์คหน้าสูตรเฉพาะของตรีสุรางค์ คลินิก ช่วยลดการอักเสบของสิวและความมัน ตามด้วยมาร์คฆ่าเชื้อสิว</p>
+  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i> สนใจโปรโมชั่น! <span>Acne Clear 1,990 บาท </span> <a href="https://line.me/R/ti/p/%40treesurang" target="_blank"><u> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> สนใจคลิ๊ก</u></a></p>
+  
+  <p><strong>"BLUE LIGHT THERAPY PROGRAM"</strong> รักษาสิวอุดตันและสิวอักเสบด้วยเลเซอร์ BLUE LIGHT THERAPY ที่มีความยาวคลื่น 420-450 นาโนเมตร ช่วยฆ่าเชื้อแบคทีเรียที่ทำให้เกิดสิว (P.acne) ลำแสงจะส่งตรงเฉพาะบริเวณที่เป็นสิวเท่านั้น โดยไม่ส่งผลอันตรายต่อผิวส่วนอื่นๆ อีกทั้งยังช่วยลดความมันบนใบหน้าและลดโอกาสการเกิดสิวอุดตันในระยะยาวได้ดี เหมาะสำหรับผู้เป็นสิวเรื้อรังและไม่อยากรับประทานยา</p>
+  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i> สนใจโปรโมชั่น! <span>BLUE LIGHT THERAPY PROGRAM 999 บาท</span> <a href="https://line.me/R/ti/p/%40treesurang" target="_blank"><u> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> สนใจคลิ๊ก</u></a></p>
+  
+  <p>ตรีสุรางค์ คลินิก มีพร้อมให้บริการทั้ง 3 สาขา ได้แก่ สาขาลาดพร้าว 62, สาขาสมุทรสาคร และ สาขาราชบุรี</p>
+  
+  <h5><u>ช่องทางการติดต่อ</u></h5>
+  <p><i class="fab fa-line"></i> : <a href="https://bit.ly/2H8fDT9" target="_blank"> @treesurang</a></p>
+  <p><i class="fa fa-facebook-square"></i> : <a href="https://www.facebook.com/Treesurangclinic" target="_blank"> facebook.com/Treesurangclinic</a></p>
+  <p><i class="fa fa-instagram"></i> : <a href="https://www.instagram.com/treesurang_clinic/" target="_blank"> treesurang_clinic</a></p>
+  <p><i class="fa fa-tiktok"></i> : <a href="https://www.tiktok.com/@treesurang_clinic" target="_blank"> treesurang_clinic</a></p>
+  <p><i class="fa fa-globe"></i> : <a href="http://www.treesurangclinic.com" target="_blank"> www.treesurangclinic.com</a></p>
+  <p><i class="fa fa-map-marker"></i> แผนที่สาขา (ลาดพร้าว62): <a href="https://goo.gl/maps/8C5ZKoAJrmUReNyEA" target="_blank"> Click Here</a></p>
+  <p><i class="fa fa-phone-square"></i> มหาชัย: <a href="tel:0995624446" target="_blank"> 099-562-4446</a></p>
+  <p><i class="fa fa-map-marker"></i> แผนที่สาขา (มหาชัย): <a href="https://goo.gl/maps/3knhcKitJG72" target="_blank"> Click Here</a></p>
+  <p><i class="fa fa-phone-square"></i> ราชบุรี: <a href="tel:0946646292" target="_blank"> 094-664-6292</a></p>
+  <p><i class="fa fa-map-marker"></i> แผนที่สาขา (ราชบุรี): <a href="https://bit.ly/2YrNpbS" target="_blank"> Click Here</a></p>
+</div>
+
+
+
+  <!-- Clinic 3 -->
+<div id="Rank3">
+  <h3><span class="rank">3</span> ลลิษาคลินิก</h3>
+  <img src="images/10-อันดับคลินิกรักษาสิว/3-lalizaclinic.png" alt="ลลิษาคลินิก">
+  <p>คลินิกรักษาสิว น้องใหม่ที่เน้นคุณภาพแบบจัดเต็ม โดยรวบรวมทีมแพทย์เฉพาะทางด้านผิวหนัง สาขา ตจวิทยา ที่มีประสบการณ์การรักษาสิวมากกว่า 10 ปี จะรอยแดง รอยดำ ฝ้า กระ สิวอักเสบ สิวอุดตัน สิวผด สิวฮอร์โมนต่างๆ ลลิษาคลินิกเอาอยู่ มีการตรวจวิเคราะห์เชื้อสิวก่อนการวางแผนการรักษาในแต่ละบุคคล เพื่อแก้ปัญหาสิวที่ต้นเหตุ ร่วมกับการใช้เทคโนโลยีที่ทันสมัย ปลอดภัย สิวดีขึ้นได้ ไม่เลี้ยงไข้ ไม่มีเซลล์ขายคอร์สมากวนใจ ผลลัพธ์น่าพอใจในราคาสบายกระเป๋า</p>
+  <p><strong>รักษาสิว ด้วยโปรแกรม <span class="textblue">"Acne Clear"</span> เคลียร์สิวเก่า ลดการเกิดสิวใหม่ <span class="pi-text-bg-base">ในราคาเพียง 990 บาท</span> <u>จัดเต็ม 11 ขั้นตอนดังนี้</u></strong></p>
+  <ul>
+    <li>ทำความสะอาดผิวหน้าด้วย Cleansing Water สูตรเฉพาะคนเป็นสิว</li>
+    <li>ผลัดเซลล์ผิวอย่างอ่อนโยน</li>
+    <li>กดสิว</li>
+    <li>ฉีดสิว</li>
+    <li>ปลอบประโลมผิวด้วย Aloe Vera Smooth Gel</li>
+    <li>Cryo บำบัดผิวด้วยความเย็นให้รูขุมขนกระชับ</li>
+    <li>มาส์กหน้าสำหรับคนเป็นสิว สูตรลดการอักเสบ ฆ่าเชื้อสิว</li>
+    <li>ปรับสภาพผิวด้วยน้ำแร่ธรรมชาติ</li>
+    <li>LED Therapy กระตุ้นให้ผิวแข็งแรง ฆ่าเชื้อสิว ลดรอยดำสิว</li>
+    <li>เติมความชุ่มชื้นให้ผิวด้วยผลิตภัณฑ์สูตรอ่อนโยน</li>
+    <li>ปกป้องผิวด้วยกันแดดสูตรสำหรับสิวโดยเฉพาะ</li>
+  </ul>
+  <p style="line-height:23px"><strong>และสำหรับลูกค้าใหม่ ลลิษาคลินิกมีโปรโมชั่นสุดพิเศษ!</strong> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> <span class="pi-text-bg-base">ให้มาทดลองรักษาสิวกันแบบฟรีๆ มูลค่า 1,500 บาท</span> ที่จะได้ปรึกษากับคุณหมอผู้เชี่ยวชาญทางด้านผิวหนัง ตรวจเชื้อสิว กดสิว ฉีดสิว พร้อมรับยากลับบ้านไปอีก 4 ตัว โดยไม่มีค่าใช้จ่ายใดๆ เลย</p>
+  
+  <h5><u>ช่องทางการติดต่อ</u></h5>
+  <p><i class="fa fa-facebook-square"></i> : <a href="https://www.facebook.com/lalizaclinic" target="_blank"> facebook.com/lalizaclinic</a></p>
+  <p><i class="fa fa-instagram"></i> : <a href="https://www.instagram.com/lalizaclinic/" target="_blank"> lalizaclinic</a></p>
+  <p><i class="fa fa-tiktok"></i> : <a href="https://www.tiktok.com/@laliza.clinic" target="_blank"> laliza.clinic</a></p>
+  <p><i class="fab fa-line"></i> : <a href="https://line.me/ti/p/%40lalizaclinic" target="_blank"> @lalizaclinic</a></p>
+  <p><i class="fa fa-globe"></i> : <a href="https://lalizaclinic.com/" target="_blank"> www.lalizaclinic.com</a></p>
+</div>
+
+<!-- Clinic 4 -->
+<div id="Rank4">
+  <h3><span class="rank">4</span> ราชเทวีคลินิก</h3>
+  <img src="images/10-อันดับคลินิกรักษาสิว/4-rajdhevee.jpg" alt="ราชเทวีคลินิก">
+  <p>"ราชเทวีคลินิก" เรียกได้ว่า เป็นตำนานแห่งคลินิกความงามเลยก็ว่าได้ เปิดตัวครั้งแรกตั้งแต่ปี พ.ศ. 2520 และมีชื่อเสียงสืบเนื่องมายาวนานมาจนถึงปัจจุบัน ไม่ต้องอธิบายกันเยอะก็น่าจะรู้ว่าที่นี่สั่งสมประสบการณ์ รวมทั้งมีทีมแพทย์ผู้เชี่ยวชาญไว้มากมาย</p>
+  <p>การรักษาสิวฝ้ากระและปัญหาผิวพรรณต่างๆ ที่ราชเทวีคลินิกต้องพบแพทย์ เพื่อให้แพทย์ได้ตรวจวินิจฉัย จึงจะประเมินและวางแผนการรักษาที่ถูกต้อง จำเป็นและเหมาะสมกับอาการ ชนิด / ลักษณะของสิว ของคนไข้แต่ละรายค่ะ และการรักษาก็เป็นแบบรายครั้ง ไม่มีแบบคอร์สค่ะ</p>
+  <p>หากเป็นการรักษาสิวอุดตัน มีวิธีการรักษาตั้งแต่การทายา รับประทานยา ทำทรีทเมนท์เสริมการรักษา และทำห้ตถการ (เลเซอร์) ในคนไข้บางรายอาจจะต้องใช้หลายๆ วิธีผสมผสานกันตามความจำเป็นและเหมาะสม การจะใช้เทคนิควิธีการรักษาด้วยวิธีใด ขึ้นอยู่กับดุลยพินิจของแพทย์ที่ทำการรักษาอยู่ ซึ่งแพทย์จะพิจารณาตามความจำเป็นและเหมาะสมกับคนไข้แต่ละรายค่ะ</p>
+  <p>ค่าบริการตรวจรักษาโดยแพทย์ของราชเทวีคลินิกมีอัตราตั้งแต่ 100 - 500 บาท ขึ้นอยู่กับความยากง่ายของปัญหา สภาพปัญหาผิวพรรณของผู้รับบริการแต่ละท่าน ที่มารับบริการตรวจรักษาในแต่ละครั้ง ซึ่งอาจจะมีสภาพปัญหาผิวพรรณที่ไม่เหมือนกันได้ค่ะ ทั้งนี้ขึ้นอยู่กับดุลยพินิจของแพทย์แต่ละท่าน ราคาอาจแตกต่างกันไปในแต่ละสาขาและแพทย์ผู้ตรวจค่ะ</p>
+  <p>ค่าใช้จ่ายในการรักษาสิว ขึ้นอยู่กับยาที่ได้รับ ทรีทเมนท์และหัตถการที่ทำ หากได้รับเฉพาะยาทาและยารับประทานไปค่าใช้จ่ายเริ่มต้นที่ประมาณ 1,000 - 1,500 บาทต่อสัปดาห์ค่ะ</p>
+  
+  <h5><u>ช่องทางการติดต่อ</u></h5>
+  <p><i class="fa fa-phone-square"></i> : <a href="tel:022515588" target="_blank"> 02-251-5588</a></p>
+  <p><i class="fab fa-line"></i> : <a href="https://line.me/ti/p/%40vrz5304h" target="_blank"> @rcClub</a></p>
+  <p><i class="fa fa-facebook-square"></i> : <a href="https://www.facebook.com/rcClub/" target="_blank"> facebook.com/rcClub</a></p>
+  <p><i class="fa fa-globe"></i> : <a href="https://www.rcskinclinic.com" target="_blank"> www.rcskinclinic.com</a></p>
+</div>
+
+<!-- Clinic 5 -->
+<div id="Rank5">
+  <h3><span class="rank">5</span> โรงพยาบาลแพทย์รังสิต</h3>
+  <img src="images/10-อันดับคลินิกรักษาสิว/5-IPO_PHG_img2.jpg" alt="โรงพยาบาลแพทย์รังสิต">
+  <p><strong>โรงพยาบาลแพทย์รังสิต</strong></p>
+  <p>กลุ่มโรงพยาบาลแพทย์รังสิต เป็นหนึ่งในโรงพยาบาลเอกชนในจังหวัดปทุมธานีมากว่า 30 ปี ปัจจุบันโรงพยาบาลแพทย์รังสิต ขยายโรงพยาบาลและพื้นที่ โดยจัดตั้งโรงพยาบาลในเครือรวมเป็น 3 โรงพยาบาลด้วยกัน ประกอบด้วย โรงพยาบาลแพทย์รังสิต (ประกันสังคม), โรงพยาบาลแพทย์รังสิต 2, โรงพยาบาลเฉพาะทางแม่และเด็กแพทย์รังสิต  ซึ่งทำให้การบริการทางการแพทย์มีความหลากหลายเฉพาะทาง และรองรับผู้ป่วยที่มีแนวโน้มเพิ่มมากขึ้น</p>
+  
+  <h5><u>ช่องทางการติดต่อ</u></h5>
+  <p><i class="fa fa-phone-square"></i> : <a href="tel:029989999" target="_blank"> 02-998-9999</a></p>
+  <p><i class="fa fa-instagram"></i> : <a href="https://www.instagram.com/patrangsit/" target="_blank"> patrangsit</a></p>
+  <p><i class="fa fa-facebook-square"></i> : <a href="https://www.facebook.com/patrangsithospital/" target="_blank"> facebook.com/patrangsithospital</a></p>
+  <p><i class="fa fa-globe"></i> : <a href="https://www.patrangsit.com/รู้จักแพทย์รังสิต/" target="_blank"> https://www.patrangsit.com/รู้จักแพทย์รังสิต/</a></p>
+</div>
+
+<!-- Clinic 6 -->
+<div id="Rank6">
+  <h3><span class="rank">6</span> พรเกษมคลินิก</h3>
+  <img src="images/10-อันดับคลินิกรักษาสิว/6-Pornkasem.jpg" alt="พรเกษมคลินิก">
+  <p>เพื่อให้ผิวหน้าสวยใสควรใช้เลเซอร์ชนิดไหนดี? | ปัญหาผิวหมองคล้ำ จุดด่างดำ และริ้วรอยที่คอยกวนใจ | ถ้าอยากรักษาด้วยเลเซอร์ต้องเริ่มต้นอย่างไร? | การดูแลผิวหน้าให้กระจ่างใสด้วยเลเซอร์ ง่ายกว่าที่คุณคิดเพียงแค่เลือกชนิดของเลเซอร์ให้เหมาะกับสภาพผิวและปัญหา โดยแพทย์ผู้เชี่ยวชาญเพื่อตอบโจทย์ ผิวสวยใสสุขภาพดีที่คุณต้องการ พรเกษมคลินิก มีโปรแกรมเลเซอร์ดีๆ ที่ช่วยฟื้นฟูผิวหน้าใสพร้อมนวัตกรรมใหม่ๆ ที่คุณอาจยังไม่รู้มาบอกกัน</p>
+  <p><strong>รักษาสิวต้องใช้เวลานานเท่าใด?</strong></p>
+  <p>การรักษาสิว ที่มีประสิทธิภาพควรได้รับคำแนะนำและดูแลโดยแพทย์ผู้เชี่ยวชาญ ที่จะทำการวิเคราะห์สาเหตุปัจจัยได้อย่างถูกต้อง และแนะนำวิธีปฏิบัติตัวรวมทั้งทำการรักษาที่มีประสิทธิภาพ แพทย์เฉพาะทางจะช่วยเลือกแผนการรักษาสิวที่เหมาะสม ทั้งการใช้ยาและผลิตภัณฑ์รักษาสิวที่เหมาะกับผิวและไม่ก่อให้เกิดสิวเพิ่มขึ้น แนะนำการปฏิบัติตัว หลีกเลี่ยงสาเหตุและพฤติกรรมที่ก่อให้เกิดสิว ผลการรักษาจะเห็นผลดีขึ้นได้ตั้งแต่ภายในสัปดาห์แรก และดีขึ้นเป็นลำดับ ขึ้นอยู่กับสาเหตุและความรุนแรงของการเกิดสิว การปฏิบัติตามคำแนะนำและการรักษาที่เหมาะสม จะช่วยให้ผลการรักษาเป็นที่น่าพึงพอใจ และยับยั้งการเกิดผลข้างเคียงที่ไม่พึงประสงค์ตามมา อันได้แก่ แผลเป็นและรอยแดงดำ ระยะเวลาที่เห็นผลชัดประมาณสี่ถึงแปดสัปดาห์ รวมทั้งการปฏิบัติตัวต่อเนื่องเพื่อป้องกันการเกิดสิวขึ้นใหม่ แพทย์ผู้ทำการรักษาจะเป็นผู้แนะนำ ว่าควรจะหยุดการรักษาได้หรือลดการกินยาทายาลงอย่างไร เพื่อให้เป็นไปตามแนวทางที่เหมาะสม</p>
+  
+  <h5><u>ช่องทางการติดต่อ</u></h5>
+  <p><i class="fa fa-phone-square"></i> : <a href="tel:022521317" target="_blank"> 02-252-1317</a></p>
+  <p><i class="fab fa-line"></i> : <a href="http://bit.ly/2DRyIXQ" target="_blank"> @pornkasem</a></p>
+  <p><i class="fa fa-facebook-square"></i> : <a href="https://www.facebook.com/Pornkasemclinic/" target="_blank"> facebook.com/Pornkasemclinic</a></p>
+  <p><i class="fa fa-globe"></i> : <a href="http://www.pornkasemclinic.com" target="_blank"> www.pornkasemclinic.com</a></p>
+</div>
+
+<!-- Clinic 7 -->
+<div id="Rank7">
+  <h3><span class="rank">7</span> Pongsak Clinic</h3>
+  <img src="images/10-อันดับคลินิกรักษาสิว/7-Pongsak.png" alt="Pongsak Clinic">
+  <p>รักษาสิว Acne DNA คือ การนำสารอาหารที่มีประโยชน์เข้าสู่ผิวหนัง เพื่อรักษาปัญหาสิว เช่น ลดการเกิดสิว ฆ่าเชื้อที่ทำให้เกิดสิวอักเสบ ช่วยรักษาสิวอักเสบและสิวอุดตัน ลดการทำงานของต่อมไขมัน ทำให้สิวยุบตัวเร็วขึ้น ฯลฯ พร้อมปรับสภาพผิวให้มีความสมดุล ทำให้ใบหน้าเรียบเนียนสม่ำเสมอ รักษาอาการแพ้ และควบคุมความมันบนใบหน้า ช่วยลดริ้วรอยจากสิว ป้องกันการเกิดหลุมสิว และทำให้ผิวแข็งแรงในระดับที่ล้ำลึกถึงโครงสร้างของ DNA ในเซลล์ผิว รักษาสิวที่ไหนดีนั้น Pongsak Clinic พร้อมให้บริการ 9 สาขา ได้แก่ เอสพลานาด รัชดา, ฟิวเจอร์พาร์ค รังสิต,มาร์เก็จวินเลจ หัวหิน, นครปฐม, ศรีราชา, เซ็นทรัลชลบุรี, สัตหีบ, ระยอง, และหาดใหญ่ ปรึกษาได้ฟรีทางแชทไลน์นี้ ตอบโดยแพทย์</p>
+  
+  <h5><u>ช่องทางการติดต่อ</u></h5>
+  <p><i class="fa fa-phone-square"></i> : <a href="tel:0817212900" target="_blank"> 081-721-2900</a></p>
+  <p><i class="fab fa-line"></i> : <a href="https://lin.ee/cWAQvki" target="_blank"> @pongsakclinic</a></p>
+  <p><i class="fa fa-facebook-square"></i> : <a href="https://www.facebook.com/pongsakclinic/" target="_blank"> facebook.com/pongsakclinic</a></p>
+  <p><i class="fa fa-globe"></i> : <a href="https://www.pongsak-clinic.com/home" target="_blank"> www.pongsak-clinic.com</a></p>
+</div>
+
+<!-- Clinic 8 -->
+<div id="Rank8">
+  <h3><span class="rank">8</span> นิติพล คลินิก</h3>
+  <img src="images/10-อันดับคลินิกรักษาสิว/8-nitiponclinic.jpg" alt="นิติพล คลินิก">
+  <p>นิติพล คลินิก เติบโตภายในระยะเวลาอันรวดเร็ว และมีการขยายสาขาอย่างต่อเนื่อง เพื่อรองรับและให้บริการแก่ลูกค้าอย่างทั่วถึง จนในขณะนี้ นิติพล คลินิก มีสาขาว่า 130 สาขาทั่วประเทศ ด้วยเทคโนโลยีที่ก้าวหน้า พร้อมการบริการที่เป็นหนึ่ง จากทีมแพทย์ผู้เชี่ยวชาญเฉพาะทาง และทีมงานที่มีความรู้ความชำนาญเป็นเลิศ ทำให้นิติพล คลินิก ไม่ได้เป็นเพียงคลินิกดูแลผิวพรรณ แต่เป็นสถาบันดูแลความงามครบวงจรที่รวม "ศาสตร์" แห่งการแพทย์ที่ล้ำสมัย และ "ศิลป์" เพื่อความงาม ให้ผสมผสานกันได้อย่างลงตัว</p>
+  
+  <h5><u>ช่องทางการติดต่อ</u></h5>
+  <p><i class="fa fa-phone-square"></i> : <a href="tel:0813519866" target="_blank"> 081-351-9866</a></p>
+  <p><i class="fab fa-line"></i> : <a href="http://line.me/ti/p/@nitiponclinic" target="_blank"> @nitiponclinic</a></p>
+  <p><i class="fa fa-facebook-square"></i> : <a href="https://www.facebook.com/nitiponclinic" target="_blank"> facebook.com/nitiponclinic</a></p>
+  <p><i class="fa fa-globe"></i> : <a href="http://www.nitiponclinic.com/" target="_blank"> www.nitiponclinic.com</a></p>
+</div>
+
+<!-- Clinic 9 -->
+<div id="Rank9">
+  <h3><span class="rank">9</span> The Prima Clinic</h3>
+  <img src="images/10-อันดับคลินิกรักษาสิว/9-Theprimaclinic.jpg" alt="The Prima Clinic">
+  <p>คลินิกมาแรงมากๆ อยู่ในจังหวัดชลบุรี นั่นคือ <strong>เดอะ พรีม่า คลินิก ศรีราชา</strong> ที่เพิ่งเปิดได้ไม่นาน แต่ก็ได้การันตี ขึ้นอันดับ 1 คลินิกรักษาสิว ยอดนิยมในจังหวัดชลบุรีจากเว็ปไซต์ Wongnai</p>
+  <p>เดอะ พรีม่า คลินิก ดูแลโดยคุณหมอช้อป นพ.วรุตม์ คุณาฤทธิพล หมอคนชลบุรีโดยกำเนิด แพทย์ผิวหนังและเวชศาสตร์ชะลอวัย ที่มีประสบการณ์ดูแลผิวดาราเซเลปในกรุงเทพฯมาแล้วมากมาย ซึ่งคนไข้ต่างบอกเป็นเสียงเดียวกันว่า หมอใจดี เป็นกันเอง รักษาตรงจุด และไม่เลี้ยงไข้</p>
+  <p>โปรแกรมรักษาสิว ที่เดอะ พรีม่า คลินิก มีหลากหลายรูปแบบตามความรุนแรงของสิว S / M / L แต่โปรแกรมที่คนไข้รีวิวแน่นว่าเห็นผลเร็วตั้งแต่ครั้งแรก และคุ้มค่ามาก นั่นคือ <strong class="pi-text-bg-base">"Acne Treatment Size L"</strong> <u>โปรแกรมรักษาสิว 10 ขั้นตอน ซึ่งครบ จบทุกปัญหาสิว</u></p>
+  <ul>
+    <li>3D Facial Analysis วิเคราะห์สภาพผิว ด้วยเครื่องสแกน 3 มิติ เพื่อค้นหาเชื้อสิว ความมัน และรอยสิวใต้ผิวหนัง</li>
+    <li>Facial Cleansing ทำความสะอาดหน้าขจัดสิ่งสกปรกและความมัน</li>
+    <li>Electro Mesotherapy ใช้เครื่องปล่อยคลื่นประจุไฟฟ้าแบบอ่อน ส่งตัวยาฆ่าเชื้อสิว ลงลึกกว่าการทาครีม 10 เท่า</li>
+    <li>Acne Injection ฉีดสิวอักเสบโดยหมอช้อป</li>
+    <li>Acne Extraction กดสิวอุดตัน โดยผู้เชี่ยวชาญ</li>
+<li>Light Therapy ฉายแสงฆ่าเชื้อสิวด้วยไฟทางการแพทย์ที่ฆ่าเชื้อสิวได้มากกว่า 80%</li>
+<li>Detox Mask มาส์กฆ่าเชื้อสิว กระชับรูขุมขน</li>
+<li>Skin Cooling ส่งคลื่นความเย็นเพื่อปิดผิว ป้องกันสิ่งสกปรกเข้าไปอุดตันบนใบหน้า</li>
+<li>Cosmeceuticals Apply ทาครีมบำรุง ด้วยเวชสำอางเข้มข้น</li>
+<li>Oral-Topical Therapy รับยากิน ยาทา ซึ่งหมอช้อปจะปรับสูตรตัวยาให้เหมาะกับคนไข้แต่ละราย</li>
+</ul>
+
+<p><strong class="pi-text-bg-base">ที่สำคัญ! ยังได้แถม "IPL bright"</strong> ไอพีแอลหน้าใสจากออสเตรเลีย ช่วยลดรอยสิว ผิวกระจ่างใส ซึ่งหมอช้อปทำเอง ไม่ใช่พนักงานทำ และยิงให้ไม่จำกัดช็อตอีกด้วย</p>
+<p>และสำหรับคนที่ไม่ค่อยมีสิว แต่กังวลปัญหารอยสิว อยากให้หายเร็ว ที่เดอะ พรีม่า คลินิก ยังมีโปรแกรมเลเซอร์รอยสิวที่กำลังถูกพูดถึงมาก นั่นคือ <strong>"Aurora Laser"</strong> (ออโรร่า เลเซอร์) เลเซอร์ลดรอยแดงสิว มาตรฐานอเมริกา ที่ให้ผลลัพธ์ดีกว่าการทำ IPL ถึง 10 เท่า กับอีกหนึ่งโปรแกรมเลเซอร์รอยสิวที่ฮิตสุดในยุคนี้ นั่นคือ Pico Duo Laser (พิโค่ ดูโอ้ เลเซอร์) ที่สามารถลดรอยสิวให้หายได้ภายในการรักษาไม่เกิน 5 ครั้ง ทั้งยังช่วยลดหน้ามัน รูขุมขนกว้าง โดยไม่ทำให้ผิวบางอีกด้วย</p>
+<p>เรียกได้ว่า คุณหมอช้อป จัดเต็มเครื่องมือและตัวยามาตรฐานระดับโลกมาไว้ที่ชลบุรีจนครบ สมกับคุณหมอบอกว่า เรายกกรุงเทพฯมาไว้ที่นี่แล้ว</p>
+<p>นับเป็นข่าวดีของคนชลบุรีที่ไม่ต้องเดินทางมาถึงกรุงเทพฯ ซึ่งใครที่กำลังกังวลปัญหาสิว รอยสิว หรือหลุมสิว สามารถเข้าไปปรึกษาคุณหมอช้อปได้ที่ เดอะ พรีม่า คลินิก หน้าห้างอิออน แมกซ์แวลู หลังโรงเรียนอัสสัมชัญ ศรีราชา (คลินิกมีแห่งเดียวที่อำเภอศรีราชา ไม่มีสาขา) ปรึกษาฟรี คุณหมอใจดีมาก</p>
+<p>เปิดให้บริการ 12:00 - 20:00 น. หยุดทุกวันอังคาร</p>
+<p>เสาร์-อาทิตย์ เปิด 10:30 - 20:00 น.</p>
+
+<h5><u>ช่องทางการติดต่อ</u></h5>
+<p><i class="fa fa-phone-square"></i> : <a href="tel:0994458886" target="_blank"> 099-445-8886</a></p>
+<p><i class="fab fa-line"></i> : <a href="http://line.me/ti/p/~@theprimaclinic" target="_blank"> @theprimaclinic</a></p>
+<p><i class="fa fa-instagram"></i> : <a href="https://www.instagram.com/theprimaclinic/?hl=en" target="_blank"> @theprimaclinic</a></p>
+<p><i class="fa fa-facebook-square"></i> : <a href="https://www.facebook.com/theprimaclinic" target="_blank"> facebook.com/theprimaclinic</a></p>
+<p><i class="fa fa-globe"></i> : <a href="https://www.theprimaclinic.com/" target="_blank"> www.theprimaclinic.com</a></p>
+<p><i class="fa fa-map-marker"></i> แผนที่: <a href="https://g.page/theprimaclinic?share" target="_blank"> Click Here</a></p>
+</div>
+
+<!-- Clinic 10 -->
+<div id="Rank10">
+  <h3><span class="rank">10</span> 55th Clinic</h3>
+  <img src="images/10-อันดับคลินิกรักษาสิว/10-55laser.jpg" alt="55th Clinic">
+  <p>55th Clinic บริษัท ฟิฟตี้ฟิฟท์ เลเซอร์ คลินิก จำกัด บริหารงานโดยคุณหมอเชอรี่ พญ.สุรัติ อัศวานุชิต รับปรึกษาโรคทั่วไป ความงาม และลดกระชับสัดส่วน ดูแลโดยแพทย์ ใช้เครื่องมือ เลเซอร์ และผลิตภัณฑ์ที่ผ่าน อย.</p>
+  
+  <h5><u>ช่องทางการติดต่อ</u></h5>
+  <p><i class="fa fa-phone-square"></i> : <a href="tel:022313394" target="_blank"> 02-231-3394</a></p>
+  <p><i class="fab fa-line"></i> : <a href="https://line.me/ti/p/%4055thclinic" target="_blank"> @55thclinic</a></p>
+  <p><i class="fa fa-facebook-square"></i> : <a href="https://www.facebook.com/55laser" target="_blank"> facebook.com/55laser</a></p>
+  <p><i class="fa fa-globe"></i> : <a href="http://www.55laser.com " target="_blank"> www.55laser.com </a></p>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 <a href="https://www.google.co.th/search?q=คลินิกรักษาสิว&kgmid=/g/11b8_rbx_j">กัญวราคลินิก | ที่อยู่: 104/9 หมู่บ้านไอดีไซน์, แขวงบางชัน, เขตคลองสามวา, กรุงเทพมหานคร 10510</a> | โทร: <a href="tel:0917954884">0917954884</a></p>
+      <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.6549843028633!2d100.7026542!3d13.859736799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6353ea6f7fc5%3A0xd93abae2497f5f1f!2z4LiB4Lix4LiN4Lin4Lij4Liy4LiE4Lil4Li04LiZ4Li04LiBIOC4hOC4peC4tOC4meC4tOC4geC4o-C4seC4geC4qeC4suC4quC4tOC4pyDguKvguKXguLjguKHguKrguLTguKcg4Lij4Li54LiC4Li44Lih4LiC4LiZIOC4ouC4geC4geC4o-C4sOC4iuC4seC4muC4nOC4tOC4p-C4q-C4meC5ieC4siBVbHRyYWZvcm1lciBWZW51cyB2aXZh!5e0!3m2!1sth!2sth!4v1739629203947!5m2!1sth!2sth" width="99%" height="289" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript สำหรับ Hamburger Menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      
+      hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

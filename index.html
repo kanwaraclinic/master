@@ -2596,76 +2596,17 @@
     </div>
   </section>
           
-
-          
-        </div>
-        <div class="slider-nav">
-          <button class="prev-btn">❮</button>
-          <button class="next-btn">❯</button>
-        </div>
-        <div class="slider-dots">
-          <div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-        </div>
-    </div>
-
-    <script>
-        let currentSlide = 0;
-        const totalSlides = 125;
-        const track = document.getElementById("reviewTrack");
-        const dots = document.querySelectorAll(".dot");
-        const prevBtn = document.querySelector(".prev-btn");
-        const nextBtn = document.querySelector(".next-btn");
-        const slideCounter = document.getElementById("currentSlide");
-
-        function updateSlider() {
-            const translateX = -currentSlide * 100;
-            track.style.transform = "translateX(" + translateX + "%)";
-            
-            dots.forEach(function(dot, index) {
-                if (index === currentSlide) {
-                    dot.classList.add("active");
-                } else {
-                    dot.classList.remove("active");
-                }
-            });
-            
-            slideCounter.textContent = currentSlide + 1;
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlider();
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateSlider();
-        }
-
-        nextBtn.addEventListener("click", nextSlide);
-        prevBtn.addEventListener("click", prevSlide);
-
-        dots.forEach(function(dot, index) {
-            dot.addEventListener("click", function() {
-                currentSlide = index;
-                updateSlider();
-            });
-        });
-
-        // Auto-play
-        setInterval(nextSlide, 5000);
-    </script>
-</section>
   <!-- Footer -->
   <footer>
     <div class="container">
       <p>© 2025 <a href="https://www.google.co.th/search?q=คลินิกรักษาสิว&kgmid=/g/11b8_rbx_j">กัญวราคลินิก | ที่อยู่: 104/9 หมู่บ้านไอดีไซน์, แขวงบางชัน, เขตคลองสามวา, กรุงเทพมหานคร 10510</a> | โทร: <a href="tel:0917954884">0917954884</a></p>
-      <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.6549843028633!2d100.7026542!3d13.859736799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6353ea6f7fc5%3A0xd93abae2497f5f1f!2z4LiB4Lix4LiN4Lin4Lij4Liy4LiE4Lil4Li04LiZ4Li04LiBIOC4hOC4peC4tOC4meC4tOC4geC4o-C4seC4geC4qeC4suC4quC4tOC4pyDguKvguKXguLjguKHguKrguLTguKcg4Lij4Li54LiC4Li44Lih4LiC4LiZIOC4ouC4geC4geC4o-C4sOC4iuC4seC4muC4nOC4tOC4p-C4q-C4meC5ieC4siBVbHRyYWZvcm1lciBWZW51cyB2aXZh!5e0!3m2!1sth!2sth!4v1739629203947!5m2!1sth!2sth" width="99%" height="289" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+      <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.6549843028633!2d100.7026542!3d13.859736799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6353ea6f7fc5%3A0xd93abae2497f5f1f!2z4LiB4Lix4LiN4Lin4Lij4Liy4LiE4Lil4Li04LiZ4Li04LiBIOC4hOC4peC4tOC4meC4tOC4geC4o-C4seC4geC4qeC4suC4quC4tOC4dyDguKvguKXguLjguKHguKrguLTguKcg4Lij4Li54LiC4Li44Lim4LiC4LiZIOC4ouC4geC4geC4o-C4sOC4iOC4seC4muC4nOC4tOC4hyDguKfguKfguJnguLXguYDguJvguLnguKfguKfguKXguYIgVWx0cmFmb3JtZXIgVmVudXMgdml2YQ!5e0!3m2!1sth!2sth!4v1739629203947!5m2!1sth!2sth" width="99%" height="289" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
     </div>
   </footer>
 
-  <!-- JavaScript สำหรับ Hamburger Menu -->
+  <!-- JavaScript -->
   <script>
+    // Hamburger Menu
     document.addEventListener('DOMContentLoaded', function() {
       const hamburger = document.getElementById('hamburger');
       const navMenu = document.getElementById('nav-menu');
@@ -2674,6 +2615,72 @@
         navMenu.classList.toggle('active');
       });
     });
+
+    // Review Slider
+    let currentSlide = 0;
+    const totalSlides = 8; // Update this to the actual number of slides you have
+    const track = document.getElementById("reviewTrack");
+    const dots = document.querySelectorAll(".dot");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+    const slideCounter = document.getElementById("currentSlide");
+
+    function updateSlider() {
+        const translateX = -currentSlide * (100 / totalSlides);
+        track.style.transform = "translateX(" + translateX + "%)";
+        
+        // Update dots
+        dots.forEach(function(dot, index) {
+            if (index === currentSlide) {
+                dot.classList.add("active");
+            } else {
+                dot.classList.remove("active");
+            }
+        });
+        
+        // Update counter
+        slideCounter.textContent = currentSlide + 1;
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
+
+    // Event listeners
+    if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+    if (prevBtn) prevBtn.addEventListener("click", prevSlide);
+
+    // Dot navigation
+    dots.forEach(function(dot, index) {
+        dot.addEventListener("click", function() {
+            currentSlide = index;
+            updateSlider();
+        });
+    });
+
+    // Auto-play (optional - remove if not wanted)
+    let autoPlay = setInterval(nextSlide, 5000);
+
+    // Pause auto-play on hover
+    const slider = document.querySelector('.review-slider');
+    if (slider) {
+        slider.addEventListener('mouseenter', function() {
+            clearInterval(autoPlay);
+        });
+
+        slider.addEventListener('mouseleave', function() {
+            autoPlay = setInterval(nextSlide, 5000);
+        });
+    }
+
+    // Initialize slider
+    updateSlider();
   </script>
 </body>
 </html>

@@ -631,9 +631,6 @@
 </section-->
 
   <!-- Reviews Section -->
-<section class="reviews">
-    <div class="container">
-      <h2>รีวิวจากลูกค้าจริง</h2>	
     <div class="review-slider">
         <div class="slide-counter">
             <span id="currentSlide">1</span> / 8
@@ -752,7 +749,62 @@
           </div>
           
         </div>
-</section>
+        <div class="slider-nav">
+          <button class="prev-btn">❮</button>
+          <button class="next-btn">❯</button>
+        </div>
+        <div class="slider-dots">
+          <div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 8;
+        const track = document.getElementById("reviewTrack");
+        const dots = document.querySelectorAll(".dot");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+        const slideCounter = document.getElementById("currentSlide");
+
+        function updateSlider() {
+            const translateX = -currentSlide * 100;
+            track.style.transform = "translateX(" + translateX + "%)";
+            
+            dots.forEach(function(dot, index) {
+                if (index === currentSlide) {
+                    dot.classList.add("active");
+                } else {
+                    dot.classList.remove("active");
+                }
+            });
+            
+            slideCounter.textContent = currentSlide + 1;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+
+        dots.forEach(function(dot, index) {
+            dot.addEventListener("click", function() {
+                currentSlide = index;
+                updateSlider();
+            });
+        });
+
+        // Auto-play
+        setInterval(nextSlide, 5000);
+    </script>
 
   <!-- Reviews Section -->
 

@@ -1,1 +1,1 @@
-npx https://github.com/google-gemini/gemini-cli
+npx https://github.com/google-gemini/gemini-cli --model gemini-3-pro-preview

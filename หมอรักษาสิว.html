@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แพทย์หญิงกัญวรา นวอนุรักษ์ (หมอเหมี่ยว) - แพทย์ผู้เชี่ยวชาญด้านสิวและผิวพรรณ | กัญวราคลินิก</title>
+  <meta name="description" content="รู้จักกับ หมอเหมี่ยว พญ.กัญวรา นวอนุรักษ์ แพทย์เจ้าของกัญวราคลินิก ผู้เชี่ยวชาญด้านการรักษาสิว หลุมสิว และผิวพรรณ ประสบการณ์กว่า 10 ปี พร้อมดูแลคุณด้วยความจริงใจ">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Physician",
+    "name": "พญ.กัญวรา นวอนุรักษ์",
+    "alternateName": "หมอเหมี่ยว",
+    "image": [
+      "https://www.กัญวราคลินิก.com/2341.jpg"
+    ],
+    "description": "แพทย์ผู้เชี่ยวชาญด้านการรักษาสิวและผิวพรรณ ประจำกัญวราคลินิก",
+    "medicalSpecialty": "Dermatology",
+    "employee": {
+      "@type": "Organization",
+      "name": "กัญวราคลินิก"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "มหาวิทยาลัยมหิดล"
+    },
+    "identifier": {
+      "@type": "PropertyValue",
+      "name": "เลขที่ใบประกอบวิชาชีพเวชกรรม",
+      "value": "34555"
+    }
+  }
+  </script>
+
+  <!-- CSS -->
+  <style>
+    /* === Embedded Font: Kanit === */
+    @font-face {
+      font-family: 'Kanit';
+      src: url(data:font/woff2;charset=utf-8;base64,BASE64_DATA_HERE) format('woff2'); /* Placeholder for actual font data if needed, or link from Google Fonts */
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    /* Import Kanit from Google Fonts for backup */
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Kanit', sans-serif;
+      line-height: 1.6;
+      color: #555;
+      padding-top: 70px;
+      background-color: #fcfcfc;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #d8af37;
+    }
+
+    /* Header & Nav */
+    header {
+      background-color: #51af99;
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      background-color: #fff;
+      padding: 5px;
+      height: 40px;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+    .logo span {
+      color: #235E6E;
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 24px;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .hamburger .bar {
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav ul li {
+      margin-left: 25px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    /* Doctor Profile Section */
+    .doctor-profile {
+      padding: 80px 0;
+      background-color: #fff;
+    }
+    .profile-grid {
+      display: flex;
+      gap: 50px;
+      align-items: flex-start;
+    }
+    .profile-image-container {
+      flex: 1;
+      max-width: 400px;
+      position: relative;
+    }
+    .profile-image {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(81, 175, 153, 0.2);
+    }
+    .profile-info {
+      flex: 2;
+    }
+    .doctor-name {
+      font-size: 36px;
+      color: #235E6E;
+      margin-bottom: 10px;
+      border-bottom: 3px solid #51af99;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .doctor-title {
+      font-size: 20px;
+      color: #51af99;
+      margin-bottom: 25px;
+      font-weight: 500;
+    }
+    .bio-text {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #666;
+    }
+    .credentials-box {
+      background-color: #f9fbfb;
+      border-left: 5px solid #51af99;
+      padding: 25px;
+      border-radius: 4px;
+      margin-bottom: 30px;
+    }
+    .credentials-box h3 {
+      color: #235E6E;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+    .credentials-list {
+      list-style-type: none;
+    }
+    .credentials-list li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .credentials-list li:before {
+      content: "•";
+      color: #51af99;
+      font-weight: bold;
+      margin-right: 10px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    /* Philosophy Section */
+    .philosophy {
+      background-color: #235E6E;
+      color: #fff;
+      padding: 60px 0;
+      text-align: center;
+    }
+    .philosophy h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .philosophy p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4a4a4a;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+    .footer-content p {
+      margin-bottom: 10px;
+    }
+    .map-container {
+      margin-top: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Floating Buttons */
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .floating-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      color: white;
+    }
+    .floating-button:hover {
+      transform: scale(1.1);
+    }
+    .call-button { background-color: #4CAF50; }
+    .line-button { background-color: #00B900; }
+    .messenger-button { background-color: #0084FF; }
+
+    /* Media Queries */
+    @media (max-width: 992px) {
+      .hamburger { display: flex; }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #51af99;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+      }
+      nav ul.active { display: flex; }
+      nav ul li { margin: 15px 0; text-align: center; }
+      .profile-grid { flex-direction: column; }
+      .profile-image-container { max-width: 100%; margin-bottom: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html" style="display: flex; align-items: center;">
+          <img src="logo.png" alt="โลโก้ กัญวราคลินิก">
+          <span>กัญวราคลินิก</span>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="index.html">หน้าหลัก</a></li>
+          <li><a href="หมอรักษาสิว.html">ข้อมูลแพทย์</a></li>
+          <li><a href="คลินิกรักษาสิว-กรุงเทพ.html">บทความ</a></li>
+          <li><a href="#contact">ติดต่อเรา</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Doctor Profile Section -->
+  <section class="doctor-profile">
+    <div class="container">
+      <div class="profile-grid">
+        <div class="profile-image-container">
+          <img src="2341.jpg" alt="พญ.กัญวรา นวอนุรักษ์ (หมอเหมี่ยว)" class="profile-image">
+        </div>
+        <div class="profile-info">
+          <h1 class="doctor-name">พญ.กัญวรา นวอนุรักษ์ (หมอเหมี่ยว)</h1>
+          <p class="doctor-title">แพทย์ผู้เชี่ยวชาญด้านผิวหนังและความงาม | เลขที่ใบประกอบวิชาชีพเวชกรรม 34555</p>
+          
+          <p class="bio-text">
+            "หมอเหมี่ยว" เป็นแพทย์ผู้ก่อตั้งกัญวราคลินิก มีความตั้งใจที่จะดูแลคนไข้ทุกคนให้มีผิวพรรณที่ดีขึ้นด้วยความจริงใจ เน้นการรักษาที่ต้นเหตุของปัญหา โดยเฉพาะปัญหาสิวและรอยสิว ด้วยประสบการณ์ในวงการคลินิกความงามกว่า 10 ปี คุณหมอจึงเข้าใจสภาพผิวที่หลากหลายและเลือกใช้วิธีการรักษาที่เหมาะสมที่สุดสำหรับคนไข้แต่ละท่าน
+          </p>
+
+          <div class="credentials-box">
+            <h3>ประวัติการศึกษาและการทำงาน</h3>
+            <ul class="credentials-list">
+              <li><strong>แพทยศาสตรบัณฑิต (เกียรตินิยม):</strong> คณะแพทยศาสตร์ศิริราชพยาบาล มหาวิทยาลัยมหิดล (ปี 2549)</li>
+              <li><strong>ประสบการณ์การทำงาน:</strong> แพทย์ด้านเวชกรรมความงามกว่า 10 ปี (เริ่มตั้งแต่ปี 2550)</li>
+              <li><strong>ผู้ก่อตั้ง:</strong> กัญวราคลินิก (เปิดให้บริการตั้งแต่ปี 2558)</li>
+            </ul>
+          </div>
+
+          <div class="credentials-box" style="border-left-color: #235E6E;">
+            <h3>ความเชี่ยวชาญพิเศษ</h3>
+            <ul class="credentials-list">
+              <li>การรักษาสิวทุกประเภท (สิวอักเสบ, สิวอุดตัน, สิวฮอร์โมน)</li>
+              <li>การรักษาหลุมสิวและรอยแผลเป็นจากสิว</li>
+              <li>การปรับรูปหน้าและดูแลผิวพรรณ (Botox, Filler, Laser)</li>
+              <li>การดูแลฝ้า กระ และจุดด่างดำ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="philosophy">
+    <div class="container">
+      <h2>ปรัชญาการดูแลคนไข้</h2>
+      <p>
+        "ที่กัญวราคลินิก เราเน้นความจริงใจ ไม่เลี้ยงไข้ และไม่ยัดเยียดคอร์ส หมอตรวจและวิเคราะห์ปัญหาผิวด้วยตัวเอง เพื่อวางแผนการรักษาที่ตรงจุดและคุ้มค่าที่สุดสำหรับคนไข้ทุกคน เพราะเราเชื่อว่าทุกคนมีความดูดีในแบบของตัวเอง"
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <p><strong>กัญวราคลินิก (Kanwara Clinic)</strong></p>
+        <p>104/9 หมู่บ้านไอดีไซน์ ถนนเลียบคลองสอง แขวงบางชัน เขตคลองสามวา กรุงเทพมหานคร 10510</p>
+        <p>โทร: <a href="tel:0917954884" style="color: #fff; text-decoration: underline;">0917954884</a></p>
+        <p><strong>เวลาทำการ:</strong></p>
+        <p>อังคาร - ศุกร์: 10:30 - 19:30 น.</p>
+        <p>เสาร์ - อาทิตย์: 10:00 - 18:00 น.</p>
+        <p>(หยุดทุกวันจันทร์)</p>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.6549843028633!2d100.7026542!3d13.859736799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6353ea6f7fc5%3A0xd93abae2497f5f1f!2z4LiB4Lix4LiN4Lin4Lij4Liy4LiE4Lil4Li04LiZ4Li04LiBIOC4hOC4peC4tOC4meC4tOC4geC4o-C4seC4geC4qeC4suC4quC4tOC4dyDguKvguKXguLjguKHguKrguLTguKcg4Lij4Li54LiC4Li44Lim4LiC4LiZIOC4ouC4geC4geC4o-C4sOC4iOC4seC4muC4nOC4tOC4hyDguKfguKfguJnguLXguYDguJvguLnguKfguKfguKXguYIgVWx0cmFmb3JtZXIgVmVudXMgdml2YQ!5e0!3m2!1sth!2sth!4v1739629203947!5m2!1sth!2sth" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p style="margin-top: 20px; font-size: 12px; opacity: 0.7;">© 2025 กัญวราคลินิก. สงวนลิขสิทธิ์.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Buttons -->
+  <div class="floating-buttons">
+    <a href="tel:0917954884" class="floating-button call-button" aria-label="Call us">
+      <i class="material-icons">phone</i>
+    </a>
+    <a href="http://line.me/ti/p/@kanwaraclinic" class="floating-button line-button" aria-label="Line chat">
+      <i class="material-icons">chat</i>
+    </a>
+    <a href="https://m.me/kanwaraclinic" class="floating-button messenger-button" aria-label="Facebook messenger">
+      <i class="material-icons">message</i>
+    </a>
+  </div>
+
+  <script>
+    // Hamburger Menu
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      
+      if(hamburger) {
+        hamburger.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

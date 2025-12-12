@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>บริการของเรา - กัญวราคลินิก | รักษาสิว เลเซอร์ ปรับรูปหน้า</title>
+  <meta name="description" content="รวมบริการจากกัญวราคลินิก รักษาสิวอักเสบ สิวอุดตัน ลดรอยสิว เลเซอร์ Ultraformer, Venus Viva, Botox, Filler ดูแลโดยแพทย์ผู้เชี่ยวชาญ">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <style>
+    /* === Embedded Font: Kanit === */
+    @font-face {
+      font-family: 'Kanit';
+      src: url(data:font/woff2;charset=utf-8;base64,BASE64_DATA_HERE) format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    /* Import Kanit from Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+    /* Reset & Base Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Kanit', sans-serif; line-height: 1.6; color: #555; padding-top: 70px; background-color: #f9f9f9; }
+    a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+    a:hover { color: #d8af37; }
+
+    /* Header & Nav */
+    header { background-color: #51af99; padding: 15px 0; position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; position: relative; }
+    .logo { display: flex; align-items: center; }
+    .logo img { background-color: #fff; padding: 5px; height: 40px; border-radius: 4px; margin-right: 10px; }
+    .logo span { color: #fff; font-size: 24px; font-weight: bold; }
+    .hamburger { display: none; background: none; border: none; flex-direction: column; justify-content: space-around; width: 30px; height: 24px; cursor: pointer; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
+    .hamburger .bar { width: 100%; height: 3px; background-color: #fff; border-radius: 2px; }
+    nav ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: flex-end; }
+    nav ul li { margin-left: 25px; font-size: 16px; font-weight: 500; color: #fff; }
+
+    /* Services Page Header */
+    .page-header {
+      background-color: #235E6E;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      margin-bottom: 40px;
+    }
+    .page-header h1 { font-size: 36px; margin-bottom: 10px; }
+    .page-header p { font-size: 18px; opacity: 0.9; }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .service-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: #eee;
+    }
+    .service-content {
+      padding: 25px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-content h3 {
+      color: #235E6E;
+      font-size: 22px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #51af99;
+    }
+    .service-content p {
+      margin-bottom: 20px;
+      color: #666;
+      font-size: 15px;
+      flex: 1;
+    }
+    .service-list {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    .service-list li {
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #555;
+    }
+    .service-list li i {
+      color: #51af99;
+      margin-right: 8px;
+      font-size: 16px;
+    }
+    .btn-detail {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #51af99;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      font-weight: 500;
+      align-self: flex-start;
+    }
+    .btn-detail:hover {
+      background-color: #235E6E;
+    }
+
+    /* Footer */
+    footer { background-color: #4a4a4a; color: #fff; padding: 40px 0; text-align: center; font-size: 14px; }
+    .footer-content p { margin-bottom: 10px; }
+
+    /* Floating Buttons */
+    .floating-buttons { position: fixed; bottom: 20px; right: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 10px; }
+    .floating-button { display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: transform 0.3s ease; color: white; }
+    .floating-button:hover { transform: scale(1.1); }
+    .call-button { background-color: #4CAF50; }
+    .line-button { background-color: #00B900; }
+    .messenger-button { background-color: #0084FF; }
+
+    @media (max-width: 992px) {
+      .hamburger { display: flex; }
+      nav ul { display: none; flex-direction: column; background-color: #51af99; width: 100%; position: absolute; top: 70px; left: 0; }
+      nav ul.active { display: flex; }
+      nav ul li { margin: 15px 0; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html" style="display: flex; align-items: center;">
+          <img src="logo.png" alt="โลโก้ กัญวราคลินิก">
+          <span>กัญวราคลินิก</span>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="index.html">หน้าหลัก</a></li>
+          <li><a href="#">เกี่ยวกับเรา</a></li>
+          <li><a href="หมอรักษาสิว.html">ข้อมูลแพทย์</a></li>
+          <li><a href="บริการ.html">บริการของเรา</a></li>
+          <li><a href="คลินิกรักษาสิว-กรุงเทพ.html">บทความ</a></li>
+          <li><a href="#">รีวิว</a></li>
+          <li><a href="#contact">ติดต่อเรา</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>บริการของเรา</h1>
+      <p>ดูแลผิวพรรณและความงามครบวงจร โดยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <div class="container">
+    <div class="services-grid">
+      
+      <!-- Service 1: Acne Treatment -->
+      <div class="service-card">
+        <img src="Acne-Heal-รักษาสิว.png" alt="รักษาสิว Acne Heal" class="service-img">
+        <div class="service-content">
+          <h3>รักษาสิว (Acne Treatment)</h3>
+          <p>โปรแกรมรักษาสิวที่ครอบคลุมทุกปัญหา ไม่ว่าจะเป็นสิวอักเสบ สิวอุดตัน หรือสิวผด ด้วยเทคนิคเฉพาะของกัญวราคลินิก เน้นการรักษาที่ต้นเหตุ</p>
+          <ul class="service-list">
+            <li><i class="material-icons">check_circle</i> โปรแกรม Acne Heal</li>
+            <li><i class="material-icons">check_circle</i> กดสิว / ฉีดสิว</li>
+            <li><i class="material-icons">check_circle</i> มาสก์ลดสิว</li>
+            <li><i class="material-icons">check_circle</i> ฉายแสงลดการอักเสบ (Healite)</li>
+          </ul>
+          <a href="#" class="btn-detail">อ่านเพิ่มเติม</a>
+        </div>
+      </div>
+
+      <!-- Service 2: Laser -->
+      <div class="service-card">
+        <img src="Cellec-Acne-Laser-เลเซอร์สิว-รอยแดง-รอยดำ.png" alt="เลเซอร์หน้าใส" class="service-img">
+        <div class="service-content">
+          <h3>เลเซอร์หน้าใส & รักษารอย (Laser)</h3>
+          <p>ฟื้นฟูผิวให้กระจ่างใส ลดรอยแดง รอยดำจากสิว และรักษาฝ้า กระ ด้วยเครื่องเลเซอร์มาตรฐานสากล</p>
+          <ul class="service-list">
+            <li><i class="material-icons">check_circle</i> เลเซอร์รอยแดง/รอยดำ (Cellec)</li>
+            <li><i class="material-icons">check_circle</i> เลเซอร์รักษาฝ้า กระ</li>
+            <li><i class="material-icons">check_circle</i> กำจัดไฝ ขี้แมลงวัน (CO2 Laser)</li>
+          </ul>
+          <a href="#" class="btn-detail">อ่านเพิ่มเติม</a>
+        </div>
+      </div>
+
+      <!-- Service 3: Skin Rejuvenation (Venus Viva) -->
+      <div class="service-card">
+        <img src="https://via.placeholder.com/600x400/51af99/ffffff?text=Venus+Viva" alt="รักษาหลุมสิว Venus Viva" class="service-img">
+        <div class="service-content">
+          <h3>รักษาหลุมสิว & รูขุมขน (Venus Viva)</h3>
+          <p>เทคโนโลยี Nano Fractional RF ช่วยกระตุ้นการสร้างคอลลาเจน เติมเต็มหลุมสิวให้ตื้นขึ้น และกระชับรูขุมขนอย่างมีประสิทธิภาพ</p>
+          <ul class="service-list">
+            <li><i class="material-icons">check_circle</i> รักษาหลุมสิว</li>
+            <li><i class="material-icons">check_circle</i> กระชับรูขุมขน</li>
+            <li><i class="material-icons">check_circle</i> ปรับผิวให้เรียบเนียน</li>
+          </ul>
+          <a href="#" class="btn-detail">อ่านเพิ่มเติม</a>
+        </div>
+      </div>
+
+      <!-- Service 4: Lifting (Ultraformer) -->
+      <div class="service-card">
+        <img src="Ultraformer III ราคา.png" alt="ยกกระชับ Ultraformer III" class="service-img">
+        <div class="service-content">
+          <h3>ยกกระชับปรับรูปหน้า (Lifting)</h3>
+          <p>ยกกระชับผิวหย่อนคล้อย สลายไขมัน และปรับรูปหน้าให้เรียวสวยโดยไม่ต้องผ่าตัด ด้วยเทคโนโลยี MMFU จาก Ultraformer III</p>
+          <ul class="service-list">
+            <li><i class="material-icons">check_circle</i> Ultraformer III</li>
+            <li><i class="material-icons">check_circle</i> เก็บกรอบหน้า</li>
+            <li><i class="material-icons">check_circle</i> ลดเหนียง / ยกคิ้ว / ยกหางตา</li>
+          </ul>
+          <a href="#" class="btn-detail">อ่านเพิ่มเติม</a>
+        </div>
+      </div>
+
+      <!-- Service 5: Injections (Botox/Filler) -->
+      <div class="service-card">
+        <img src="Xeomin.jpg" alt="โบท็อกซ์ ฟิลเลอร์" class="service-img">
+        <div class="service-content">
+          <h3>ปรับรูปหน้า & ลดริ้วรอย (Injections)</h3>
+          <p>แก้ไขปัญหารูปหน้าและริ้วรอยแห่งวัย ด้วยผลิตภัณฑ์คุณภาพที่ผ่าน อย. ดูแลโดยแพทย์ผู้เชี่ยวชาญ</p>
+          <ul class="service-list">
+            <li><i class="material-icons">check_circle</i> Botox (ลดกราม / ริ้วรอย)</li>
+            <li><i class="material-icons">check_circle</i> Filler (เติมเต็มร่องลึก / คาง / ใต้ตา)</li>
+            <li><i class="material-icons">check_circle</i> Meso Fat (สลายไขมัน)</li>
+            <li><i class="material-icons">check_circle</i> Made Collagen (หน้าใส)</li>
+          </ul>
+          <a href="#" class="btn-detail">อ่านเพิ่มเติม</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <p><strong>กัญวราคลินิก (Kanwara Clinic)</strong></p>
+        <p>104/9 หมู่บ้านไอดีไซน์ ถนนเลียบคลองสอง แขวงบางชัน เขตคลองสามวา กรุงเทพมหานคร 10510</p>
+        <p>โทร: <a href="tel:0917954884" style="color: #fff; text-decoration: underline;">0917954884</a></p>
+        <p><strong>เวลาทำการ:</strong></p>
+        <p>อังคาร - ศุกร์: 10:30 - 19:30 น.</p>
+        <p>เสาร์ - อาทิตย์: 10:00 - 18:00 น.</p>
+        <p>(หยุดทุกวันจันทร์)</p>
+      </div>
+      <p style="margin-top: 20px; font-size: 12px; opacity: 0.7;">© 2025 กัญวราคลินิก. สงวนลิขสิทธิ์.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Buttons -->
+  <div class="floating-buttons">
+    <a href="tel:0917954884" class="floating-button call-button" aria-label="Call us">
+      <i class="material-icons">phone</i>
+    </a>
+    <a href="http://line.me/ti/p/@kanwaraclinic" class="floating-button line-button" aria-label="Line chat">
+      <i class="material-icons">chat</i>
+    </a>
+    <a href="https://m.me/kanwaraclinic" class="floating-button messenger-button" aria-label="Facebook messenger">
+      <i class="material-icons">message</i>
+    </a>
+  </div>
+
+  <script>
+    // Hamburger Menu
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      
+      if(hamburger) {
+        hamburger.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

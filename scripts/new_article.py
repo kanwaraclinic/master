@@ -45,6 +45,7 @@ PROMPT = """คุณคือ พญ.กัญวรา นวอนุรั�
 - ข้อมูลทางการแพทย์ต้องถูกต้อง ไม่กล่าวอ้างเกินจริง ไม่การันตีผล 100%
 - ใส่คีย์เวิร์ดหลักของหัวข้อแบบเป็นธรรมชาติ ใช้ <strong> เน้นคีย์เวิร์ดสำคัญ
 - ปิดท้ายด้วยส่วนคำถามที่พบบ่อย (FAQ) 3-5 ข้อ
+{notes}
 
 ตอบเป็น JSON เท่านั้น ตามโครงสร้างนี้:
 {{
@@ -74,13 +75,14 @@ PROMPT = """คุณคือ พญ.กัญวรา นวอนุรั�
 
 # ---------------------------------------------------------------- Gemini
 
-def call_gemini(title: str) -> dict:
+def call_gemini(title: str, notes: str = "") -> dict:
     key = os.environ.get("GEMINI_API_KEY")
     if not key:
         sys.exit("ไม่พบ GEMINI_API_KEY  (ขอฟรีได้ที่ https://aistudio.google.com/apikey)")
 
+    notes = f"\nความต้องการเพิ่มเติมจากเจ้าของคลินิก (ทำตามนี้ด้วย):\n{notes}\n" if notes else ""
     body = json.dumps({
-        "contents": [{"parts": [{"text": PROMPT.format(title=title)}]}],
+        "contents": [{"parts": [{"text": PROMPT.format(title=title, notes=notes)}]}],
         "generationConfig": {"temperature": 0.7, "responseMimeType": "application/json"},
     }).encode("utf-8")
 
@@ -282,8 +284,9 @@ def main():
     if (ROOT / filename).exists():
         sys.exit(f"มีไฟล์ {filename} อยู่แล้ว — เปลี่ยนหัวข้อเล็กน้อยแล้วลองใหม่")
 
+    notes = os.environ.get("ARTICLE_NOTES", "").strip()
     print(f"กำลังเขียนบทความ: {title}")
-    article = call_gemini(title)
+    article = call_gemini(title, notes)
 
     (ROOT / filename).write_text(build_article(title, article, filename), encoding="utf-8", newline="\n")
     print(f"สร้างไฟล์แล้ว: {filename}")

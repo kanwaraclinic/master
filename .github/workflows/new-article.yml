@@ -19,11 +19,7 @@ jobs:
   create:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+      - uses: actions/checkout@v5
 
       - name: เขียนบทความด้วย Gemini และอัปเดต index.html
         id: gen
@@ -31,7 +27,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           ARTICLE_TITLE: ${{ inputs.title }}
-        run: python scripts/new_article.py
+        run: python3 scripts/new_article.py
 
       - name: Commit และ push
         env:

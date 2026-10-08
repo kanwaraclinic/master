@@ -1,4 +1,5 @@
 name: สร้างบทความใหม่ (Gemini)
+run-name: "บทความ: ${{ inputs.title }}"
 
 on:
   workflow_dispatch:
@@ -7,6 +8,11 @@ on:
         description: "หัวข้อบทความ"
         required: true
         type: string
+      notes:
+        description: "ความต้องการเพิ่มเติม (ไม่ใส่ก็ได้)"
+        required: false
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -27,6 +33,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           ARTICLE_TITLE: ${{ inputs.title }}
+          ARTICLE_NOTES: ${{ inputs.notes }}
         run: python3 scripts/new_article.py
 
       - name: Commit และ push
@@ -37,4 +44,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- "$FILE" index.html
           git commit -m "เพิ่มบทความ: $FILE"
+          git pull --rebase
           git push

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#51af99">
+  <title>สร้างบทความใหม่ - กัญวราคลินิก</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Kanit', sans-serif; line-height: 1.6; color: #555; background: linear-gradient(135deg, #f6f9fb 0%, #eaf3f1 100%); min-height: 100vh; padding-top: 70px; }
+    a { color: #235E6E; }
+
+    header { background-color: #51af99; padding: 13px 0; position: fixed; width: 100%; top: 0; left: 0; z-index: 10; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo img { background: #fff; padding: 4px; height: 40px; border-radius: 4px; }
+    .logo span { color: #fff; font-size: 22px; font-weight: 600; }
+
+    .container { width: 100%; max-width: 640px; margin: 0 auto; padding: 0 16px; }
+    main { padding: 24px 0 48px; }
+    h1 { font-size: 26px; color: #235E6E; font-weight: 600; margin-bottom: 4px; }
+    .lead { margin-bottom: 20px; }
+
+    .card { background: #fff; border-radius: 16px; box-shadow: 0 8px 25px rgba(35, 94, 110, 0.10); padding: 22px 20px; margin-bottom: 18px; }
+    label { display: block; font-weight: 500; color: #235E6E; margin-bottom: 6px; }
+    .hint { font-size: 14px; color: #888; font-weight: 300; }
+    input, textarea { width: 100%; font: inherit; font-size: 16px; color: #333; border: 1.5px solid #d6e6e2; border-radius: 10px; padding: 12px 14px; margin-bottom: 16px; background: #fcfdfd; transition: border-color 0.2s; }
+    input:focus, textarea:focus { outline: none; border-color: #51af99; background: #fff; }
+    textarea { min-height: 120px; resize: vertical; }
+
+    .btn { display: block; width: 100%; font: inherit; font-size: 18px; font-weight: 600; color: #fff; background: #235E6E; border: none; border-radius: 30px; padding: 14px 20px; cursor: pointer; transition: background 0.3s; }
+    .btn:hover { background: #d8af37; }
+    .btn:disabled { background: #9bb8b1; cursor: not-allowed; }
+    .btn-small { display: inline-block; width: auto; font-size: 15px; padding: 9px 18px; }
+    .btn-ghost { background: #fff; color: #c0392b; border: 1.5px solid #e3c4c0; }
+    .btn-ghost:hover { background: #fdf1ef; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .status { display: none; border-left: 5px solid #51af99; }
+    .status.show { display: block; }
+    .status.error { border-left-color: #c0392b; }
+    .status.done { border-left-color: #d8af37; }
+    .status-title { font-size: 18px; font-weight: 600; color: #235E6E; display: flex; align-items: center; gap: 10px; }
+    .status-msg { margin-top: 6px; }
+    .status a.result { display: inline-block; margin-top: 12px; background: #d8af37; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 30px; font-weight: 600; }
+    .spinner { width: 20px; height: 20px; border: 3px solid #cfe7e1; border-top-color: #51af99; border-radius: 50%; animation: spin 0.9s linear infinite; flex: none; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    details summary { cursor: pointer; font-weight: 500; color: #235E6E; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after { content: '▾'; color: #51af99; }
+    details[open] summary::after { content: '▴'; }
+    details .inner { margin-top: 14px; }
+    ol.steps { padding-left: 20px; margin-bottom: 16px; font-size: 15px; }
+    ol.steps li { margin-bottom: 6px; }
+    .badge { font-size: 13px; padding: 2px 10px; border-radius: 20px; background: #eaf3f1; color: #235E6E; font-weight: 500; }
+    .badge.off { background: #fdf1ef; color: #c0392b; }
+
+    .history-item { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-top: 1px solid #eef3f2; }
+    .history-item:first-child { border-top: none; }
+    .history-icon { font-size: 20px; line-height: 1.3; flex: none; width: 24px; text-align: center; }
+    .history-body { min-width: 0; }
+    .history-title { color: #333; word-break: break-word; }
+    .history-meta { font-size: 13px; color: #999; }
+    .history-meta a { color: #51af99; }
+    .empty { color: #999; font-size: 15px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a class="logo" href="index.html"><img src="logo.png" alt="โลโก้ กัญวราคลินิก"><span>กัญวราคลินิก</span></a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>✍️ สร้างบทความใหม่</h1>
+    <p class="lead">ใส่หัวข้อ กดปุ่ม แล้วระบบจะเขียนบทความและเพิ่มลิงก์ในหน้าแรกให้อัตโนมัติ</p>
+
+    <form class="card" id="form">
+      <label for="title">หัวข้อบทความ</label>
+      <input id="title" maxlength="150" required placeholder="เช่น รักษาหลุมสิว ที่ไหนดี">
+
+      <label for="notes">ความต้องการเพิ่มเติม <span class="hint">(ไม่ใส่ก็ได้)</span></label>
+      <textarea id="notes" maxlength="1500" placeholder="เช่น เน้นคนทำงานออฟฟิศ / พูดถึงโปรแกรม Cellec Acne Laser / ใส่ราคาเริ่มต้น 990 บาท"></textarea>
+
+      <button class="btn" id="submit" type="submit">🚀 สร้างบทความ</button>
+    </form>
+
+    <div class="card status" id="status">
+      <div class="status-title" id="status-title"></div>
+      <div class="status-msg" id="status-msg"></div>
+    </div>
+
+    <div class="card">
+      <details id="settings">
+        <summary><span>⚙️ ตั้งค่ากุญแจ GitHub <span class="badge" id="token-badge"></span></span></summary>
+        <div class="inner">
+          <ol class="steps">
+            <li>เปิด <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">หน้าสร้าง Token ของ GitHub</a> (ล็อกอินบัญชี kanwaraclinic)</li>
+            <li>ตั้งชื่ออะไรก็ได้ ตั้งวันหมดอายุตามสะดวก</li>
+            <li>Repository access เลือก <b>Only select repositories</b> → เลือก <b>master</b></li>
+            <li>Permissions → <b>Actions</b> เลือก <b>Read and write</b> → <b>Contents</b> เลือก <b>Read-only</b></li>
+            <li>กด Generate token แล้วก๊อปปี้มาวางด้านล่าง</li>
+          </ol>
+          <label for="token">GitHub Token</label>
+          <input id="token" type="password" autocomplete="off" placeholder="github_pat_...">
+          <div class="row">
+            <button class="btn btn-small" id="save-token" type="button">บันทึก</button>
+            <button class="btn btn-small btn-ghost" id="clear-token" type="button">ลบออกจากเครื่องนี้</button>
+          </div>
+          <p class="hint" style="margin-top:12px">กุญแจจะถูกเก็บไว้ในเบราว์เซอร์ของเครื่องนี้เท่านั้น ไม่ได้อยู่ในเว็บไซต์ คนอื่นที่เปิดหน้านี้จะใช้งานไม่ได้</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:6px">
+        <label style="margin:0">🕘 ประวัติล่าสุด</label>
+        <button class="btn btn-small" id="refresh" type="button" style="font-size:13px;padding:6px 14px">รีเฟรช</button>
+      </div>
+      <div id="history"><p class="empty">ตั้งค่ากุญแจก่อน จึงจะเห็นประวัติ</p></div>
+    </div>
+  </main>
+
+  <script>
+    const REPO = 'kanwaraclinic/master';
+    const BRANCH = 'main';
+    const WORKFLOW = 'new-article.yml';
+    const SITE = 'https://www.xn--12cai9azdycpn2gnyb.com/';
+    const API = 'https://api.github.com/repos/' + REPO;
+    const TOKEN_KEY = 'kanwara-gh-token';
+
+    const $ = (id) => document.getElementById(id);
+
+    // ---------- เก็บ token ในเครื่อง
+    function getToken() { try { return localStorage.getItem(TOKEN_KEY) || ''; } catch (e) { return window._token || ''; } }
+    function setToken(v) { window._token = v; try { v ? localStorage.setItem(TOKEN_KEY, v) : localStorage.removeItem(TOKEN_KEY); } catch (e) {} }
+    function showTokenState() {
+      const has = !!getToken();
+      $('token-badge').textContent = has ? 'ตั้งค่าแล้ว' : 'ยังไม่ได้ตั้งค่า';
+      $('token-badge').className = 'badge' + (has ? '' : ' off');
+      if (!has) $('settings').open = true;
+    }
+
+    // ---------- เรียก GitHub API
+    async function gh(path, options = {}) {
+      const res = await fetch(API + path, {
+        ...options,
+        headers: {
+          'Accept': 'application/vnd.github+json',
+          'Authorization': 'Bearer ' + getToken(),
+          'X-GitHub-Api-Version': '2022-11-28',
+          ...(options.body ? { 'Content-Type': 'application/json' } : {}),
+        },
+      });
+      if (!res.ok) {
+        let detail = '';
+        try { detail = (await res.json()).message || ''; } catch (e) {}
+        const err = new Error(explain(res.status, detail));
+        err.status = res.status;
+        throw err;
+      }
+      return res.status === 204 ? null : res.json().catch(() => null);
+    }
+
+    function explain(status, detail) {
+      if (status === 401) return 'กุญแจ GitHub ไม่ถูกต้องหรือหมดอายุ — สร้างใหม่แล้ววางในส่วนตั้งค่า';
+      if (status === 403) return 'กุญแจไม่มีสิทธิ์พอ — ตรวจว่าให้สิทธิ์ Actions แบบ Read and write แล้ว';
+      if (status === 404) return 'ไม่พบ workflow หรือกุญแจเข้าถึง repo ไม่ได้ — ตรวจว่าอัปโหลดไฟล์ .github/workflows/new-article.yml แล้ว และเลือก repo master ตอนสร้างกุญแจ';
+      if (status === 422) return 'GitHub ไม่รับคำสั่ง (' + detail + ') — ตรวจว่าไฟล์ new-article.yml เป็นเวอร์ชันล่าสุด';
+      return 'เกิดข้อผิดพลาด (' + status + ') ' + detail;
+    }
+
+    // ---------- กล่องสถานะ
+    function status(kind, title, msg, link) {
+      const box = $('status');
+      box.className = 'card status show' + (kind === 'error' ? ' error' : kind === 'done' ? ' done' : '');
+      const t = $('status-title');
+      t.textContent = '';
+      if (kind === 'working') { const s = document.createElement('div'); s.className = 'spinner'; t.appendChild(s); }
+      t.appendChild(document.createTextNode(title));
+      const m = $('status-msg');
+      m.textContent = msg || '';
+      if (link) {
+        m.appendChild(document.createElement('br'));
+        const a = document.createElement('a');
+        a.href = link.href; a.target = '_blank'; a.rel = 'noopener';
+        a.textContent = link.text;
+        a.className = link.primary ? 'result' : '';
+        m.appendChild(a);
+      }
+      box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+    // ---------- ส่งคำสั่ง แล้วติดตามผล
+    $('form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const title = $('title').value.trim();
+      const notes = $('notes').value.trim();
+      if (!title) return;
+      if (!getToken()) { status('error', 'ยังไม่ได้ตั้งค่ากุญแจ GitHub', 'เปิดส่วน "ตั้งค่ากุญแจ GitHub" ด้านล่างก่อน'); $('settings').open = true; return; }
+
+      $('submit').disabled = true;
+      const startedAt = Date.now() - 15000;
+      try {
+        status('working', 'กำลังส่งคำสั่ง...', '');
+        await gh('/actions/workflows/' + WORKFLOW + '/dispatches', {
+          method: 'POST',
+          body: JSON.stringify({ ref: BRANCH, inputs: { title, notes } }),
+        });
+
+        status('working', 'Gemini กำลังเขียนบทความ...', 'ปกติใช้เวลา 1–3 นาที ปิดหน้านี้ได้ งานจะทำต่อเอง');
+        let run = null;
+        const deadline = Date.now() + 15 * 60 * 1000;
+        while (Date.now() < deadline) {
+          await sleep(run ? 8000 : 4000);
+          const data = await gh('/actions/workflows/' + WORKFLOW + '/runs?event=workflow_dispatch&per_page=10');
+          const fresh = (data.workflow_runs || []).filter((r) => new Date(r.created_at).getTime() >= startedAt);
+          run = fresh.find((r) => (r.display_title || '').includes(title.slice(0, 40))) || fresh[fresh.length - 1] || run;
+          if (run && run.status === 'completed') break;
+        }
+
+        if (!run || run.status !== 'completed') {
+          status('error', 'ยังไม่เสร็จในเวลาที่รอ', 'งานอาจยังทำอยู่ ดูต่อได้ที่ GitHub', { href: 'https://github.com/' + REPO + '/actions', text: 'เปิดหน้า Actions' });
+        } else if (run.conclusion !== 'success') {
+          status('error', 'สร้างบทความไม่สำเร็จ', 'กดดูรายละเอียดข้อผิดพลาดได้ที่ลิงก์นี้', { href: run.html_url, text: 'ดูรายละเอียด' });
+        } else {
+          const file = await findArticleFile(startedAt);
+          $('form').reset();
+          status('done', '✅ สร้างบทความเสร็จแล้ว!',
+            'เว็บจะอัปเดตภายใน 1–2 นาที ถ้าเปิดแล้วยังไม่เจอ ให้รอสักครู่แล้วลองใหม่',
+            file ? { href: SITE + encodeURIComponent(file), text: 'เปิดบทความ', primary: true }
+                 : { href: SITE, text: 'เปิดหน้าเว็บ', primary: true });
+        }
+      } catch (err) {
+        status('error', 'ทำไม่สำเร็จ', err.message);
+        if (err.status === 401) $('settings').open = true;
+      } finally {
+        $('submit').disabled = false;
+        loadHistory();
+      }
+    });
+
+    // ชื่อไฟล์บทความ อยู่ในข้อความ commit "เพิ่มบทความ: xxx.html"
+    async function findArticleFile(since) {
+      try {
+        const commits = await gh('/commits?sha=' + BRANCH + '&per_page=10');
+        const c = commits.find((c) => c.commit.message.startsWith('เพิ่มบทความ:') &&
+          new Date(c.commit.committer.date).getTime() >= since);
+        return c ? c.commit.message.split('\n')[0].replace('เพิ่มบทความ:', '').trim() : '';
+      } catch (e) { return ''; }
+    }
+
+    // ---------- ประวัติ
+    async function loadHistory() {
+      const box = $('history');
+      if (!getToken()) { box.innerHTML = '<p class="empty">ตั้งค่ากุญแจก่อน จึงจะเห็นประวัติ</p>'; return; }
+      try {
+        const data = await gh('/actions/workflows/' + WORKFLOW + '/runs?per_page=8');
+        const runs = data.workflow_runs || [];
+        box.textContent = '';
+        if (!runs.length) { box.innerHTML = '<p class="empty">ยังไม่มีประวัติ</p>'; return; }
+        for (const r of runs) {
+          const icon = r.status !== 'completed' ? '⏳' : r.conclusion === 'success' ? '✅' : '❌';
+          const item = document.createElement('div'); item.className = 'history-item';
+          const i = document.createElement('div'); i.className = 'history-icon'; i.textContent = icon;
+          const b = document.createElement('div'); b.className = 'history-body';
+          const t = document.createElement('div'); t.className = 'history-title';
+          t.textContent = (r.display_title || '').replace(/^บทความ:\s*/, '');
+          const m = document.createElement('div'); m.className = 'history-meta';
+          m.textContent = new Date(r.created_at).toLocaleString('th-TH', { dateStyle: 'medium', timeStyle: 'short' }) + ' · ';
+          const a = document.createElement('a'); a.href = r.html_url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'รายละเอียด';
+          m.appendChild(a);
+          b.append(t, m); item.append(i, b); box.appendChild(item);
+        }
+      } catch (err) {
+        box.textContent = '';
+        const p = document.createElement('p'); p.className = 'empty'; p.textContent = err.message; box.appendChild(p);
+      }
+    }
+
+    // ---------- ปุ่มตั้งค่า
+    $('save-token').addEventListener('click', () => {
+      const v = $('token').value.trim();
+      if (!v) return;
+      setToken(v); $('token').value = '';
+      showTokenState(); $('settings').open = false; loadHistory();
+    });
+    $('clear-token').addEventListener('click', () => { setToken(''); showTokenState(); loadHistory(); });
+    $('refresh').addEventListener('click', loadHistory);
+
+    showTokenState();
+    loadHistory();
+  </script>
+</body>
+</html>

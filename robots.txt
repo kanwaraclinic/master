@@ -1,0 +1,18 @@
+User-Agent: *
+Allow: /
+
+User-Agent: OAI-SearchBot
+User-Agent: ChatGPT-User
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: Claude-SearchBot
+User-Agent: ClaudeBot
+User-Agent: Claude-User
+Allow: /
+
+User-Agent: PerplexityBot
+User-Agent: Google-Extended
+Allow: /
+
+Host: https://www.xn--12cai9azdycpn2gnyb.com/
